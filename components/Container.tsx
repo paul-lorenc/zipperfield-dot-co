@@ -22,18 +22,23 @@ export const Container: React.FC = ({ children }) => {
   }
 
   return (
-    <div className="transition duration-1000 ease-out flex flex-col font-serif bg-white dark:bg-black">
-      <nav className="transition duration-1000 ease-out sticky-nav flex dark:text-white text-3xl font-bold justify-between max-w-6xl w-full items-start my-2 pt-2 px-8 md:my-4 mx-auto bg-white dark:bg-black">
+    <div className="flex flex-col h-screen font-serif bg-white dark:bg-black">
+      <nav className="sticky-nav flex dark:text-white text-3xl font-bold justify-between max-w-6xl w-full items-start my-2 pt-2 px-8 md:my-4 mx-auto bg-white dark:bg-black">
         <Link href="/">
           <a className="min-w-10 h-10">Zf</a>
         </Link>
         <div className="z-20 flex flex-col items-center">
           <ul
-            className={`flex ${
-              isOpen ? "block h-10" : "hidden"
+            className={`flex flex-col ${
+              isOpen ? "block" : "hidden"
             } max-w-2xl justify-center items-center`}
           >
-            <a>hello</a>
+            <Link href="/about">
+              <a className="pb-2">about</a>
+            </Link>
+            <Link href="/works">
+              <a className="pb-2">works</a>
+            </Link>
           </ul>
           <div className="flex items-center justify-center">
             <svg height="40" width="40%">
@@ -60,7 +65,9 @@ export const Container: React.FC = ({ children }) => {
           Zf
         </button>
       </nav>
-      <main className="z-0 flex flex-col items-center">{children}</main>
+      <main className="z-0 flex flex-col items-center position-absolute ">
+        {children}
+      </main>
     </div>
   );
 };
