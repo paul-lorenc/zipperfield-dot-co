@@ -1,5 +1,5 @@
 .sticky-nav {
-  position: sticky;
+  position: fixed;
   z-index: 10;
   top: 0;
   backdrop-filter: blur(40px);

@@ -22,7 +22,7 @@ export const Container: React.FC = ({ children }) => {
   }
 
   return (
-    <div className="flex flex-col h-screen font-serif bg-white dark:bg-black">
+    <div className="flex flex-col h-screen font-serif items-center bg-white dark:bg-black">
       <nav className="sticky-nav flex dark:text-white text-3xl font-bold justify-between max-w-6xl w-full items-start my-2 pt-2 px-8 md:my-4 mx-auto bg-white dark:bg-black">
         <Link href="/">
           <a className="min-w-10 h-10">Zf</a>
@@ -31,7 +31,7 @@ export const Container: React.FC = ({ children }) => {
           <ul
             className={`flex flex-col ${
               isOpen ? "block" : "hidden"
-            } max-w-2xl justify-center items-center`}
+            } max-w-2xl justify-center items-center font-thin`}
           >
             <Link href="/">
               <a className="pb-2">home</a>
@@ -44,16 +44,16 @@ export const Container: React.FC = ({ children }) => {
             </Link>
           </ul>
           <div className="flex items-center justify-center">
-            <svg height="40" width="40%">
+            <svg height="40" width="50%">
               <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
               <line x1={ax1} y1={l1} x2={bx1} y2={l2} stroke="currentColor" />
               <line x1={bx1} y1={l2} x2={bx2} y2={l2} stroke="currentColor" />
               <line x1={ax2} y1={l1} x2={bx2} y2={l2} stroke="currentColor" />
             </svg>
-            <button className="w-10 h-10" onClick={handleClick}>
-              (--)
+            <button className="font-extrabold w-10 h-10" onClick={handleClick}>
+              H
             </button>
-            <svg height="40" width="40%">
+            <svg height="40" width="50%">
               <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
               <line x1={ax1} y1={l1} x2={bx1} y2={l2} stroke="currentColor" />
               <line x1={bx1} y1={l2} x2={bx2} y2={l2} stroke="currentColor" />
