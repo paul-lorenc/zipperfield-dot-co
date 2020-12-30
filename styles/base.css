@@ -4,3 +4,22 @@
   top: 0;
   backdrop-filter: blur(40px);
 }
+
+.navtop {
+  height: 1em;
+}
+
+.navmid {
+  max-height: 7em;
+  height: 7em;
+}
+
+.openedStyle {
+  max-height: "100%";
+  transition: max-height 0.5s;
+}
+
+.closedStyle {
+  max-height: 0;
+  transition: max-height 0.5s;
+}

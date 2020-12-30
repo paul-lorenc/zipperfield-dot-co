@@ -28,36 +28,29 @@ export const Container: React.FC = ({ children }) => {
           <a className="min-w-10 h-10">Zf</a>
         </Link>
         <div className="z-20 flex flex-col items-center">
-          <ul
-            className={`flex flex-col ${
-              isOpen ? "block" : "hidden"
-            } max-w-2xl justify-center items-center font-thin`}
-          >
-            <Link href="/">
-              <a className="pb-2">home</a>
-            </Link>
-            <Link href="/about">
-              <a className="pb-2">about</a>
-            </Link>
-            <Link href="/works">
-              <a className="pb-2">works</a>
-            </Link>
-          </ul>
-          <div className="flex items-center justify-center">
-            <svg height="40" width="50%">
+          <div className="h-3 navtop flex items-start justify-center">
+            <svg height="20" width="50%">
               <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
-              <line x1={ax1} y1={l1} x2={bx1} y2={l2} stroke="currentColor" />
-              <line x1={bx1} y1={l2} x2={bx2} y2={l2} stroke="currentColor" />
-              <line x1={ax2} y1={l1} x2={bx2} y2={l2} stroke="currentColor" />
             </svg>
-            <button className="font-extrabold w-10 h-10" onClick={handleClick}>
-              H
+            <button className="font-extrabold" onClick={handleClick}>
+              -
             </button>
-            <svg height="40" width="50%">
+            <svg height="20" width="50%">
               <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
-              <line x1={ax1} y1={l1} x2={bx1} y2={l2} stroke="currentColor" />
-              <line x1={bx1} y1={l2} x2={bx2} y2={l2} stroke="currentColor" />
-              <line x1={ax2} y1={l1} x2={bx2} y2={l2} stroke="currentColor" />
+            </svg>
+          </div>
+          <div
+            className={`navmid ${isOpen ? "openedStyle" : "closedStyle"}`}
+          ></div>
+          <div className="navbot flex items-start justify-center">
+            <svg height="20" width="50%">
+              <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
+            </svg>
+            <button className="font-extrabold " onClick={handleClick}>
+              -
+            </button>
+            <svg height="20" width="50%">
+              <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
             </svg>
           </div>
         </div>
@@ -68,7 +61,7 @@ export const Container: React.FC = ({ children }) => {
           Zf
         </button>
       </nav>
-      <main className="z-0 flex flex-col items-center position-absolute ">
+      <main className="flex flex-col items-center position-absolute">
         {children}
       </main>
     </div>
