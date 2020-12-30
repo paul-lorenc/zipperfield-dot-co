@@ -10,16 +10,18 @@
 }
 
 .navmid {
-  max-height: 7em;
-  height: 7em;
+  max-height: 10em;
+  height: 10em;
 }
 
 .openedStyle {
   max-height: "100%";
-  transition: max-height 0.5s;
+  opacity: "100%";
+  transition: max-height 0.5s, opacity 0.3s 0.2s;
 }
 
 .closedStyle {
   max-height: 0;
-  transition: max-height 0.5s;
+  opacity: 0;
+  transition: max-height 0.7s, opacity 0.3s 0.1s;
 }
