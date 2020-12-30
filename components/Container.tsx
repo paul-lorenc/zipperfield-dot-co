@@ -33,6 +33,9 @@ export const Container: React.FC = ({ children }) => {
               isOpen ? "block" : "hidden"
             } max-w-2xl justify-center items-center`}
           >
+            <Link href="/">
+              <a className="pb-2">home</a>
+            </Link>
             <Link href="/about">
               <a className="pb-2">about</a>
             </Link>
