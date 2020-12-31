@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
+import ZFIcon from "./svgs/ZFIcon";
 
 export const Container: React.FC = ({ children }) => {
   let ax1 = "8%";
@@ -24,11 +25,13 @@ export const Container: React.FC = ({ children }) => {
   return (
     <div className="bg-white dark:bg-black">
       <div className="flex flex-col font-serif items-center bg-white dark:bg-black">
-        <nav className="sticky-nav flex dark:text-white text-3xl font-bold  justify-between max-w-6xl w-full items-start my-2 pt-2 px-8 md:my-4 mx-auto bg-white dark:bg-black">
+        <nav className="sticky-nav flex dark:text-white text-3xl font-bold  justify-between max-w-6xl w-full items-start my-2 pt-2 px-4 md:px-8 mx-auto bg-white dark:bg-black">
           <Link href="/">
-            <a className="min-w-10 h-10">Zf</a>
+            <a>
+              <ZFIcon />
+            </a>
           </Link>
-          <div className="z-20 flex flex-col items-center mt-2 w-2/3 text-black dark:text-white">
+          <div className="z-20 flex flex-col items-center w-2/3 text-black dark:text-white">
             <div className="h-3 navtop flex items-center justify-between">
               <svg height="100%" width="100%">
                 <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
@@ -110,7 +113,24 @@ export const Container: React.FC = ({ children }) => {
             className="w-10 h-10 font-bold"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
-            Zf
+            {mounted && (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                stroke="currentColor"
+                className="h-10 w-10 text-gray-800 dark:text-gray-200"
+              >
+                {theme === "dark" ? (
+                  <path strokeWidth={0} d="M3 9A1 1 0 0019 9A1 1 0 003 9" />
+                ) : (
+                  <path
+                    strokeWidth={0}
+                    d="M17.4186 12.0186C13.5 18.9 0 12.6 6.8814 1.4814A8.1027 8.1027 86.5943 009.9 17.1a8.1027 8.1027 86.5943 007.5186-5.0814z"
+                  />
+                )}
+              </svg>
+            )}
           </button>
         </nav>
         <main className="flex flex-col items-center position-absolute">
