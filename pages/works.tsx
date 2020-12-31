@@ -1,10 +1,57 @@
 import { Container } from "@/components/Container";
-export default function Works() {
+import { getSortedWorks } from "@/lib/mdx";
+import { Work } from "@/lib/mdx";
+import { WorkCard } from "@/components/WorkCard";
+import { NextSeo } from "next-seo";
+
+const url: string = "https://zipperfield.co/works";
+const title: string = "Completed Works - Zipperfield";
+const description: string =
+  "Portfolio of websites designed and built by Zipperfield";
+
+interface Props {
+  sortedPosts: Work[];
+}
+
+export default function Code(props: Props) {
+  const sortedPosts: Work[] = props.sortedPosts;
   return (
-    <Container>
-      <div className="mt-20 text-black dark:text-white font-serif text-2xl font-extrabold items-center max-w-2xl">
-        works
-      </div>
-    </Container>
+    <div className="bg-white dark:bg-black">
+      <Container>
+        <NextSeo
+          title={title}
+          description={description}
+          canonical={url}
+          openGraph={{
+            url,
+            title,
+            description,
+            // images: [
+            //   {
+            //     url: "https://paul-lorenc.com/banners/code-banner.png",
+            //     alt: description,
+            //   },
+            // ],
+          }}
+        />
+        <div className="text-gray-100 max-w-3xl space-y-4 items-center mt-16 md:mt-20 px-4 h-screen">
+          <div className="flex flex-col justify-center items-center h-1/2 border border-gray-200 font-extrabold">
+            Featured Project goes here
+          </div>
+          {sortedPosts.map((w) => {
+            return <WorkCard work={w} />;
+          })}
+        </div>
+      </Container>
+    </div>
   );
+}
+
+export async function getStaticProps() {
+  const sortedPosts = getSortedWorks();
+  return {
+    props: {
+      sortedPosts,
+    },
+  };
 }
