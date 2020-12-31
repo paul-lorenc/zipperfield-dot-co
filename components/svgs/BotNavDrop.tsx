@@ -1,5 +1,5 @@
 const BotNavDrop = (props: any) => (
-  <svg viewBox="0 0 36.5 16.7" className="w-1/2">
+  <svg viewBox="0 0 36.5 16.7" className="w-2/5 h-2" preserveAspectRatio="none">
     <path
       d="M30,42.8H28.8V52.9H30c16.2,0,18.3-.5,18.3-7V36.2c-.2,4.5-.7,6.6-4.2,6.6Z"
       transform="translate(-11.8 -36.2)"
