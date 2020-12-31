@@ -1,3 +1,6 @@
+html {
+}
+
 .sticky-nav {
   position: fixed;
   z-index: 10;

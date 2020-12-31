@@ -3,11 +3,13 @@ import Image from "next/image";
 export default function Home() {
   return (
     <Container>
-      <div className="font-serif text-black dark:text-white text-2xl font-extrabold items-center justify-center mt-20 md:mt-40 max-w-2xl px-4">
-        <div className="flex flex-col md:flex-row items-center border border-black dark:border-white p-4">
+      <div className="font-serif md:h-screen text-black dark:text-white text-2xl font-extrabold mt-20 md:mt-40 max-w-3xl px-4 md:px-0">
+        <div className="flex flex-col-reverse md:flex-row items-center border border-black dark:border-white p-4">
+          <div className="py-10 md:py-20 pl-10 pr-4">
+            Hello Yes this is Content
+          </div>
           <div
-            className="relative w-60 lg:w-screen h-auto max-w-sm md:max-w-xl max-h-80"
-            // style={{
+            className="relative w-64 md:w-screen h-auto max-w-sm md:max-w-lg max-h-80"
             //   position: "relative",
             //   width: "200px",
             //   height: "200px",
@@ -24,7 +26,14 @@ export default function Home() {
               priority
             />
           </div>
-          <div className="py-20 pl-10 pr-4">Hello Yes this is Content</div>
+        </div>
+        <div className="flex flex-col items-stretch md:items-start mb-10">
+          <button className="flex items-start border border-black dark:border-white mt-5 p-4 pr-20 md:w-1/3">
+            {"Works    ->"}
+          </button>
+          <button className="flex items-start border border-black dark:border-white mt-5 p-4 pr-20 md:w-1/3">
+            {"About    ->"}
+          </button>
         </div>
       </div>
     </Container>

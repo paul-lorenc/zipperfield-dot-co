@@ -23,7 +23,7 @@ export const Container: React.FC = ({ children }) => {
 
   return (
     <div className="bg-white dark:bg-black">
-      <div className="flex flex-col h-screen font-serif items-center bg-white dark:bg-black">
+      <div className="flex flex-col font-serif items-center bg-white dark:bg-black">
         <nav className="sticky-nav flex dark:text-white text-3xl font-bold  justify-between max-w-6xl w-full items-start my-2 pt-2 px-8 md:my-4 mx-auto bg-white dark:bg-black">
           <Link href="/">
             <a className="min-w-10 h-10">Zf</a>
@@ -34,7 +34,7 @@ export const Container: React.FC = ({ children }) => {
                 <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
               </svg>
               <button
-                className="h-3 w-full flex flex-col items-center justify-center text-black dark:text-white"
+                className="h-3 w-full flex flex-col items-center justify-center"
                 onClick={handleClick}
               >
                 <svg height="100%" width="20%">
