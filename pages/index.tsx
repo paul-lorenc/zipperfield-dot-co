@@ -8,7 +8,7 @@ export default function Home() {
     <Container>
       <div className="font-serif md:h-screen w-screen px-4 text-black dark:text-white text-2xl font-extrabold mt-16 md:mt-20 max-w-3xl">
         <div className="flex flex-col-reverse md:flex-row items-center border border-black dark:border-white px-4 pb-1">
-          <div className="flex flex-col md:w-1/2 mt-1">
+          <div className="flex flex-col md:w-1/2 md:pl-1 mt-1">
             <div className="pt-7 pb-1 text-md">Your Idea Our Brush</div>
             <p className="hidden md:block font-thin font-xs">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -33,7 +33,7 @@ export default function Home() {
           <Link href="/works">
             <a className="flex items-center justify-between border border-black dark:border-white mt-5 px-4 py-2 md:w-1/3">
               <a>{"Works"}</a>
-              <div className="pl-4 h-full w-2/3">
+              <div className="pl-4 md:pl-6 pr-2 h-full w-2/3">
                 <ArrowsIcon />
               </div>
             </a>
@@ -41,7 +41,7 @@ export default function Home() {
           <Link href="/about">
             <a className="flex items-center justify-between border border-black dark:border-white mt-5 px-4 py-2 md:w-1/3">
               <a>{"About"}</a>
-              <div className="pl-4 h-full w-2/3">
+              <div className="pl-4 md:pl-6 pr-2 h-full w-2/3">
                 <ArrowsIcon />
               </div>
             </a>
