@@ -64,10 +64,10 @@ export const Container: React.FC = ({ children }) => {
               <ul
                 className={`flex flex-col ${
                   isOpen ? "block" : "hidden"
-                } mt-10 max-w-2xl justify-center items-center font-thin`}
+                } mt-3 max-w-2xl justify-center items-center font-bold`}
               >
                 <Link href="/">
-                  <a onClick={handleClick} className="pt-7 pb-2">
+                  <a onClick={handleClick} className="pt-5 pb-2">
                     home
                   </a>
                 </Link>
@@ -83,12 +83,12 @@ export const Container: React.FC = ({ children }) => {
                 </Link>
               </ul>
             </div>
-            <div className="h-1 navbot flex items-start justify-center">
+            <div className="h-3 navbot flex items-start justify-center">
               <svg height="100%" width="100%">
                 <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
               </svg>
               <button
-                className="h-1 w-full flex flex-col items-center"
+                className="h-4 w-full flex flex-col items-center"
                 onClick={handleClick}
               >
                 <svg height="100%" width="20%">

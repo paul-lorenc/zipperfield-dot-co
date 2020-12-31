@@ -13,8 +13,13 @@ html {
 }
 
 .navmid {
-  max-height: 10em;
-  height: 10em;
+  max-height: 7em;
+  height: 7em;
+}
+
+.navbot {
+  max-height: 2em;
+  height: 1em;
 }
 
 .openedStyle {
@@ -26,5 +31,5 @@ html {
 .closedStyle {
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.7s, opacity 0.3s 0.1s;
+  transition: max-height 0.7s, opacity 0.3s 0.2s;
 }
