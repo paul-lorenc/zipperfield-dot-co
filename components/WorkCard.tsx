@@ -21,10 +21,10 @@ export const WorkCard: React.FC<any> = (props: Props) => {
           /> */}
         </div>
         <div>
-          <h4 className="text-lg font-bold tracking-tight text-gray-100">
+          <h4 className="text-lg font-bold tracking-tight text-black dark:text-white">
             {p.title}
           </h4>
-          <p className="leading-5 text-gray-300">{p.excerpt}</p>
+          <p className="leading-5 text-black dark:text-white">{p.excerpt}</p>
         </div>
       </a>
     </Link>

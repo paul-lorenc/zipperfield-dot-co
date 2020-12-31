@@ -34,8 +34,8 @@ export default function Code(props: Props) {
             // ],
           }}
         />
-        <div className="text-gray-100 max-w-3xl space-y-4 items-center mt-16 md:mt-20 px-4 h-screen">
-          <div className="flex flex-col justify-center items-center h-1/2 border border-gray-200 font-extrabold">
+        <div className="text-black dark:text-white max-w-3xl space-y-4 items-center mt-16 md:mt-20 px-4 h-screen">
+          <div className="flex flex-col justify-center items-center h-1/2 border border-black dark:border-white font-extrabold">
             Featured Project goes here
           </div>
           {sortedPosts.map((w) => {
