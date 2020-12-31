@@ -3,10 +3,10 @@ import Image from "next/image";
 export default function Home() {
   return (
     <Container>
-      <div className="font-serif md:h-screen text-black dark:text-white text-2xl font-extrabold mt-20 md:mt-40 max-w-3xl px-4 md:px-0">
-        <div className="flex flex-col-reverse md:flex-row items-center border border-black dark:border-white p-4">
-          <div className="py-10 md:py-20 pl-10 pr-4">
-            Hello Yes this is Content
+      <div className="font-serif md:h-screen text-black dark:text-white text-2xl font-extrabold mt-16 md:mt-20 max-w-3xl px-4 md:px-0">
+        <div className="flex flex-col-reverse md:flex-row items-center border border-black dark:border-white px-4 py-1">
+          <div className="pt-7 pb-1 md:py-20 md:pl-10 md:pr-4 text-md font-s">
+            Your Idea Our Brush
           </div>
           <div
             className="relative w-64 md:w-screen h-auto max-w-sm md:max-w-lg max-h-80"
@@ -22,7 +22,7 @@ export default function Home() {
               width={500}
               height={700}
               layout="responsive"
-              sizes="300px"
+              sizes="250px"
               priority
             />
           </div>
