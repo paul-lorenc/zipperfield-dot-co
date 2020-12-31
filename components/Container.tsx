@@ -76,7 +76,7 @@ export const Container: React.FC = ({ children }) => {
                 <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
               </svg>
               <button
-                className="h-3 md:h-4 w-full md:w-1/3 flex flex-col items-center justify-center"
+                className="h-3 w-full md:w-1/3 flex flex-col items-center justify-center"
                 onClick={handleClick}
               >
                 <BotNavDrop />
