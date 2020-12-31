@@ -29,22 +29,26 @@ export default function Home() {
             />
           </div>
         </div>
-        <div className="flex flex-col font-base items-stretch w-full md:items-start">
+        <div className="flex flex-col font-thin items-stretch w-full md:items-start">
           <Link href="/works">
-            <a className="flex items-center justify-between border border-black dark:border-white mt-5 px-4 py-2 md:w-1/3">
-              <a>{"Works"}</a>
-              <div className="pl-4 md:pl-6 pr-2 h-full w-2/3">
-                <ArrowsIcon />
-              </div>
-            </a>
+            <button className="flex items-center justify-between border border-black dark:border-white mt-5 px-4 py-2 md:w-1/3">
+              <>
+                <a>{"Works"}</a>
+                <div className="pl-4 md:pl-6 pr-2 h-full w-2/3">
+                  <ArrowsIcon />
+                </div>
+              </>
+            </button>
           </Link>
           <Link href="/about">
-            <a className="flex items-center justify-between border border-black dark:border-white mt-5 px-4 py-2 md:w-1/3">
-              <a>{"About"}</a>
-              <div className="pl-4 md:pl-6 pr-2 h-full w-2/3">
-                <ArrowsIcon />
-              </div>
-            </a>
+            <button className="flex items-center justify-between border border-black dark:border-white mt-5 px-4 py-2 md:w-1/3">
+              <>
+                <a>About</a>
+                <div className="pl-4 md:pl-6 pr-2 h-full w-2/3">
+                  <ArrowsIcon />
+                </div>
+              </>
+            </button>
           </Link>
         </div>
       </div>
