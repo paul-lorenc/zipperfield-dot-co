@@ -2,6 +2,8 @@ import Link from "next/link";
 import { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
 import ZFIcon from "./svgs/ZFIcon";
+import TopNavDrop from "./svgs/TopNavDrop";
+import BotNavDrop from "./svgs/BotNavDrop";
 
 export const Container: React.FC = ({ children }) => {
   let ax1 = "8%";
@@ -32,32 +34,15 @@ export const Container: React.FC = ({ children }) => {
             </a>
           </Link>
           <div className="z-20 flex flex-col items-center w-2/3 text-black dark:text-white">
-            <div className="h-3 navtop flex items-center justify-between">
+            <div className="h-5 navtop flex items-center justify-between">
               <svg height="100%" width="100%">
                 <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
               </svg>
               <button
-                className="h-3 w-full flex flex-col items-center justify-center"
+                className="h-5 w-full md:w-1/3 flex flex-col items-center justify-center"
                 onClick={handleClick}
               >
-                <svg height="100%" width="20%">
-                  <line
-                    x1={ax1}
-                    y1={l1}
-                    x2={ax2}
-                    y2={l1}
-                    stroke="currentColor"
-                  />
-                </svg>
-                <svg className="h-1" height="100%" width="40%">
-                  <line
-                    x1={ax1}
-                    y1="3%"
-                    x2={ax2}
-                    y2="3%"
-                    stroke="currentColor"
-                  />
-                </svg>
+                <TopNavDrop />
               </button>
               <svg height="100%" width="100%">
                 <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
@@ -86,23 +71,15 @@ export const Container: React.FC = ({ children }) => {
                 </Link>
               </ul>
             </div>
-            <div className="h-3 navbot flex items-start justify-center">
+            <div className="h-3 mb-1 navbot flex items-start justify-center">
               <svg height="100%" width="100%">
                 <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
               </svg>
               <button
-                className="h-4 w-full flex flex-col items-center"
+                className="h-3 md:h-4 w-full md:w-1/3 flex flex-col items-center justify-center"
                 onClick={handleClick}
               >
-                <svg height="100%" width="20%">
-                  <line
-                    x1={ax1}
-                    y1={l1}
-                    x2={ax2}
-                    y2={l1}
-                    stroke="currentColor"
-                  />
-                </svg>
+                <BotNavDrop />
               </button>
               <svg height="100%" width="100%">
                 <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
