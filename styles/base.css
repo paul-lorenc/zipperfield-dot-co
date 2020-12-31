@@ -1,6 +1,10 @@
 html {
 }
 
+.midnavdiv {
+  width: 72.5%;
+}
+
 .sticky-nav {
   position: fixed;
   z-index: 10;

@@ -33,26 +33,40 @@ export const Container: React.FC = ({ children }) => {
               <ZFIcon />
             </a>
           </Link>
-          <div className="z-20 flex flex-col items-center w-2/3 text-black dark:text-white">
+          <div className="midnavdiv px-1.5 md:px-0 flex flex-col items-center text-black dark:text-white">
             <div className="h-5 navtop flex items-center justify-between">
               <svg height="100%" width="100%">
-                <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
+                <line
+                  strokeWidth={2}
+                  x1={ax1}
+                  y1={l1}
+                  x2={ax2}
+                  y2={l1}
+                  stroke="currentColor"
+                />
               </svg>
               <button
-                className="h-5 w-full md:w-1/3 flex flex-col items-center justify-center"
+                className="h-5 w-full md:w-1/3 flex flex-col items-center justify-center focus:outline-none"
                 onClick={handleClick}
               >
                 <TopNavDrop />
               </button>
               <svg height="100%" width="100%">
-                <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
+                <line
+                  strokeWidth={2}
+                  x1={ax1}
+                  y1={l1}
+                  x2={ax2}
+                  y2={l1}
+                  stroke="currentColor"
+                />
               </svg>
             </div>
             <div className={`navmid ${isOpen ? "openedStyle" : "closedStyle"}`}>
               <ul
                 className={`flex flex-col ${
                   isOpen ? "block" : "hidden"
-                } mt-3 max-w-2xl justify-center items-center font-bold`}
+                } mt-3 justify-center items-center font-bold`}
               >
                 <Link href="/">
                   <a onClick={handleClick} className="pt-5 pb-2">
@@ -73,33 +87,47 @@ export const Container: React.FC = ({ children }) => {
             </div>
             <div className="h-3 mb-1 navbot flex items-start justify-center">
               <svg height="100%" width="100%">
-                <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
+                <line
+                  strokeWidth={2}
+                  x1={ax1}
+                  y1={l1}
+                  x2={ax2}
+                  y2={l1}
+                  stroke="currentColor"
+                />
               </svg>
               <button
-                className="h-3 w-full md:w-1/3 flex flex-col items-center justify-center"
+                className="h-3 w-full md:w-1/3 flex flex-col items-center justify-center focus:outline-none"
                 onClick={handleClick}
               >
                 <BotNavDrop />
               </button>
               <svg height="100%" width="100%">
-                <line x1={ax1} y1={l1} x2={ax2} y2={l1} stroke="currentColor" />
+                <line
+                  strokeWidth={2}
+                  x1={ax1}
+                  y1={l1}
+                  x2={ax2}
+                  y2={l1}
+                  stroke="currentColor"
+                />
               </svg>
             </div>
           </div>
           <button
-            className="w-10 h-10 font-bold"
+            className="font-bold focus:outline-none"
             onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
           >
             {mounted && (
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
+                viewBox="-2 0 24 24"
                 fill="currentColor"
                 stroke="currentColor"
-                className="h-10 w-10 text-gray-800 dark:text-gray-200"
+                className="h-10 w-10 md:h-16 md:w-16 text-gray-800 dark:text-gray-200"
               >
                 {theme === "dark" ? (
-                  <path strokeWidth={0} d="M3 9A1 1 0 0019 9A1 1 0 003 9" />
+                  <path strokeWidth={0} d="M2 9A1 1 0 0018 9A1 1 0 002 9" />
                 ) : (
                   <path
                     strokeWidth={0}
@@ -110,9 +138,7 @@ export const Container: React.FC = ({ children }) => {
             )}
           </button>
         </nav>
-        <main className="flex flex-col items-center position-absolute">
-          {children}
-        </main>
+        <main className="flex flex-col items-center">{children}</main>
       </div>
     </div>
   );
