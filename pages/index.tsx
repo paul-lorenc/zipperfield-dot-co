@@ -10,7 +10,7 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row items-center md:items-start border border-black dark:border-white md:px-4 pb-1">
           <div className="flex justify-center md:flex-col w-full px-2 md:px-0 md:w-1/2 md:pl-1 mt-1">
             <div className="flex pt-7 md:pt-12 pb-1 text-md">
-              Your Idea, Our Brush
+              Your Idea, Our Pen
             </div>
             <p className="hidden md:block font-thin font-xs">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -32,10 +32,10 @@ export default function Home() {
           </div>
         </div>
         <div className="flex flex-col font-thin items-stretch w-full md:items-start">
-          <Link href="/works">
+          <Link href="/about">
             <button className="flex items-center justify-center md:justify-between border border-black dark:border-white mt-5 px-4 py-2 md:w-2/5">
               <div className="flex items-center justify-center px-4">
-                <a className="font-extrabold">{"Works"}</a>
+                <a className="font-extrabold">About</a>
                 {/* <svg className="h-3 w-1/3 md:hidden">
                   <line
                     x1="10%"
@@ -51,10 +51,10 @@ export default function Home() {
               </div>
             </button>
           </Link>
-          <Link href="/about">
+          <Link href="/works">
             <button className="flex items-center justify-center md:justify-between border border-black dark:border-white mt-5 px-4 py-2 md:w-2/5">
               <div className="flex items-center justify-center px-4">
-                <a className="font-extrabold">About</a>
+                <a className="font-extrabold">{"Works"}</a>
                 {/* <svg className="h-3 w-1/3 md:hidden">
                   <line
                     x1="10%"
