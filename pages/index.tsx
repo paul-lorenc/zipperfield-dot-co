@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function Home() {
   return (
     <Container>
-      <div className="font-serif md:h-screen w-screen px-4 text-black dark:text-white text-2xl font-extrabold mt-16 md:mt-20 max-w-3xl">
+      <div className="font-serif h-screen w-screen px-4 text-black dark:text-white text-2xl font-extrabold mt-16 md:mt-20 max-w-3xl">
         <div className="flex flex-col-reverse md:flex-row items-center md:items-start border border-black dark:border-white md:px-4 pb-1">
           <div className="flex justify-center md:flex-col w-full px-2 md:px-0 md:w-1/2 md:pl-1 mt-1">
             <div className="flex pt-7 md:pt-12 pb-1 text-md">
