@@ -80,6 +80,11 @@ export const Container: React.FC = ({ children }) => {
                     Works
                   </a>
                 </Link>
+                <Link href="/contact">
+                  <a onClick={handleClick} className="pb-2">
+                    Contact
+                  </a>
+                </Link>
               </ul>
             </div>
             <div className="h-3 mb-1 navbot flex items-start justify-center">

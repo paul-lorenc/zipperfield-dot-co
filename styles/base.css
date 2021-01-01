@@ -17,8 +17,8 @@ html {
 }
 
 .navmid {
-  max-height: 7em;
-  height: 7em;
+  max-height: 8em;
+  height: 8em;
 }
 
 .navbot {
@@ -41,4 +41,14 @@ html {
   max-height: 0;
   opacity: 0;
   transition: max-height 0.7s, opacity 0.3s;
+}
+
+.norotate {
+  transform: rotate(0deg);
+  transition: transform 0.5s;
+}
+
+.rotatearrow {
+  transform: rotate(90deg);
+  transition: transform 0.5s;
 }
