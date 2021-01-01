@@ -1,5 +1,8 @@
 const ZFIcon = (props: any) => (
-  <svg viewBox="-7 0 41.5 41.5" className="h-10 w-10 md:h-16 md:w-16">
+  <svg
+    viewBox="-7 0 41.5 41.5"
+    className="h-10 w-10 md:h-14 md:w-14 lg:h-16 lg:w-16"
+  >
     <path
       d="M29.7,52.5c-2.2-.4-1.8.2-1.2.6s1,.3,1.2-.6a13.9,13.9,0,0,0,.3-1.7h.1l2.2-8.8h3L32.7,53.3c-.3,1.9-.1,2.5,1.8,2.7C28.9,55.8,23.2,51.1,29.7,52.5Z"
       transform="translate(-13.1 -14.6)"

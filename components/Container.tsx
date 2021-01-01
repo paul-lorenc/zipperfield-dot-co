@@ -70,17 +70,17 @@ export const Container: React.FC = ({ children }) => {
               >
                 <Link href="/">
                   <a onClick={handleClick} className="pt-5 pb-2">
-                    home
+                    Home
                   </a>
                 </Link>
                 <Link href="/about">
                   <a onClick={handleClick} className="pb-2">
-                    about
+                    About
                   </a>
                 </Link>
                 <Link href="/works">
                   <a onClick={handleClick} className="pb-2">
-                    works
+                    Works
                   </a>
                 </Link>
               </ul>
@@ -124,7 +124,7 @@ export const Container: React.FC = ({ children }) => {
                 viewBox="-2 0 24 24"
                 fill="currentColor"
                 stroke="currentColor"
-                className="h-10 w-10 md:h-16 md:w-16 text-gray-800 dark:text-gray-200"
+                className="h-10 w-10 md:h-14 md:w-14 lg:h-16 lg:w-16 text-gray-800 dark:text-gray-200"
               >
                 {theme === "dark" ? (
                   <path strokeWidth={0} d="M2 9A1 1 0 0018 9A1 1 0 002 9" />
@@ -138,7 +138,7 @@ export const Container: React.FC = ({ children }) => {
             )}
           </button>
         </nav>
-        <main className="flex flex-col items-center">{children}</main>
+        <main className="">{children}</main>
       </div>
     </div>
   );

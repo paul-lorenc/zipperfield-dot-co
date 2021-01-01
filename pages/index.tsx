@@ -10,12 +10,11 @@ export default function Home() {
         <div className="flex flex-col-reverse md:flex-row items-center md:items-start border border-black dark:border-white md:px-4 pb-1">
           <div className="flex justify-center md:flex-col w-full px-2 md:px-0 md:w-1/2 md:pl-1 mt-1">
             <div className="flex pt-7 md:pt-12 pb-1 text-md">
-              Your Idea, Our Pen
+              Your Seed, Our Garden
             </div>
             <p className="hidden md:block font-thin font-xs">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam,
+              We leverage modern web technologies to deliever high performance
+              web applications that are crafted in your image.
             </p>
           </div>
           <div className="relative mt-2 mb-3 w-64 md:w-3/5 h-auto max-w-sm md:max-w-lg max-h-80">

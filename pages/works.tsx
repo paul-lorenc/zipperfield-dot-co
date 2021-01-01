@@ -35,7 +35,7 @@ export default function Code(props: Props) {
           }}
         />
         <div className="text-black dark:text-white max-w-3xl space-y-4 items-center mt-16 md:mt-20 px-4 h-screen">
-          <div className="flex flex-col justify-center items-center h-1/3 border border-black dark:border-white font-extrabold">
+          <div className="flex flex-col justify-center items-center h-2/5 border border-black dark:border-white font-extrabold">
             Featured Project goes here
           </div>
           {sortedPosts.map((w) => {
