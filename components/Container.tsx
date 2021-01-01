@@ -140,7 +140,7 @@ export const Container: React.FC = ({ children }) => {
             )}
           </button>
         </nav>
-        <main className="z-1">{children}</main>
+        <main className="z-1 min-h-screen">{children}</main>
       </div>
     </div>
   );

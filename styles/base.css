@@ -44,11 +44,11 @@ html {
 }
 
 .norotate {
-  transform: rotate(0deg);
+  transform: rotate(180deg);
   transition: transform 0.5s;
 }
 
 .rotatearrow {
-  transform: rotate(90deg);
+  transform: rotate(0deg);
   transition: transform 0.5s;
 }
