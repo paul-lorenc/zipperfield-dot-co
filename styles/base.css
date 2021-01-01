@@ -26,6 +26,11 @@ html {
   height: 1em;
 }
 
+.excardmid {
+  max-height: 6em;
+  height: 6em;
+}
+
 .openedStyle {
   max-height: "100%";
   opacity: "100%";
@@ -35,5 +40,5 @@ html {
 .closedStyle {
   max-height: 0;
   opacity: 0;
-  transition: max-height 0.7s, opacity 0.3s 0.2s;
+  transition: max-height 0.7s, opacity 0.3s;
 }

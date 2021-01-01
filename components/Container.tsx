@@ -6,12 +6,9 @@ import TopNavDrop from "./svgs/TopNavDrop";
 import BotNavDrop from "./svgs/BotNavDrop";
 
 export const Container: React.FC = ({ children }) => {
-  let ax1 = "8%";
-  let ax2 = "92%";
-  let bx1 = "10%";
-  let bx2 = "90%";
-  let l1 = "50%";
-  let l2 = "50%";
+  let x1 = "8%";
+  let x2 = "92%";
+  let l = "50%";
 
   const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
@@ -27,7 +24,7 @@ export const Container: React.FC = ({ children }) => {
   return (
     <div className="bg-white dark:bg-black">
       <div className="flex flex-col font-serif items-center bg-white dark:bg-black">
-        <nav className="sticky-nav flex dark:text-white text-3xl font-bold  justify-between max-w-6xl w-full items-start my-2 pt-2 px-4 md:px-8 mx-auto bg-white dark:bg-black">
+        <nav className="z-20 sticky-nav flex dark:text-white text-3xl font-bold  justify-between max-w-6xl w-full items-start my-2 pt-2 px-4 md:px-8 mx-auto bg-white dark:bg-black">
           <Link href="/">
             <a>
               <ZFIcon />
@@ -38,10 +35,10 @@ export const Container: React.FC = ({ children }) => {
               <svg height="100%" width="100%">
                 <line
                   strokeWidth={2}
-                  x1={ax1}
-                  y1={l1}
-                  x2={ax2}
-                  y2={l1}
+                  x1={x1}
+                  y1={l}
+                  x2={x2}
+                  y2={l}
                   stroke="currentColor"
                 />
               </svg>
@@ -54,10 +51,10 @@ export const Container: React.FC = ({ children }) => {
               <svg height="100%" width="100%">
                 <line
                   strokeWidth={2}
-                  x1={ax1}
-                  y1={l1}
-                  x2={ax2}
-                  y2={l1}
+                  x1={x1}
+                  y1={l}
+                  x2={x2}
+                  y2={l}
                   stroke="currentColor"
                 />
               </svg>
@@ -89,10 +86,10 @@ export const Container: React.FC = ({ children }) => {
               <svg height="100%" width="100%">
                 <line
                   strokeWidth={2}
-                  x1={ax1}
-                  y1={l1}
-                  x2={ax2}
-                  y2={l1}
+                  x1={x1}
+                  y1={l}
+                  x2={x2}
+                  y2={l}
                   stroke="currentColor"
                 />
               </svg>
@@ -105,10 +102,10 @@ export const Container: React.FC = ({ children }) => {
               <svg height="100%" width="100%">
                 <line
                   strokeWidth={2}
-                  x1={ax1}
-                  y1={l1}
-                  x2={ax2}
-                  y2={l1}
+                  x1={x1}
+                  y1={l}
+                  x2={x2}
+                  y2={l}
                   stroke="currentColor"
                 />
               </svg>
@@ -138,7 +135,7 @@ export const Container: React.FC = ({ children }) => {
             )}
           </button>
         </nav>
-        <main className="">{children}</main>
+        <main className="z-1">{children}</main>
       </div>
     </div>
   );
