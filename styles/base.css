@@ -27,8 +27,13 @@ html {
 }
 
 .excardmid {
-  max-height: 6em;
-  height: 6em;
+  max-height: 6.25em;
+  height: 6.25em;
+}
+
+.excardmidlong {
+  max-height: 10em;
+  height: 10em;
 }
 
 .openedStyle {

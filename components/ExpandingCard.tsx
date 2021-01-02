@@ -7,6 +7,7 @@ interface Props {
   title: string;
   info: string;
   href: string;
+  children: any;
 }
 export const ExpandingCard: React.FC<any> = (props: Props) => {
   const [isOpen, setisOpen] = useState(false);
@@ -15,7 +16,7 @@ export const ExpandingCard: React.FC<any> = (props: Props) => {
     setisOpen(!isOpen);
   }
   return (
-    <div className="flex flex-col border border-black dark:border-white py-4">
+    <div className="flex flex-col border border-black dark:border-white pt-2 pb-4">
       <button
         className="flex justify-between focus:outline-none px-6 md:px-16"
         onClick={handleClick}
@@ -29,15 +30,21 @@ export const ExpandingCard: React.FC<any> = (props: Props) => {
         )}
       </button>
       <div
-        className={`excardmid ${
+        className={`excardmid md:excardmidlong ${
           isOpen ? "openedStyle" : "closedStyle"
         } flex flex-col`}
       >
-        <div className={`flex flex-col ${isOpen ? "block" : "hidden"} mt-3`}>
-          <div className="font-thin text-left px-4 py-2">{props.info}</div>
-          <a href={props.href} className="text-sm">
-            Learn More
-          </a>
+        <div
+          className={`flex flex-col items-start ${
+            isOpen ? "block" : "hidden"
+          } mt-1`}
+        >
+          <div className="font-thin text-lg text-left pl-6 pr-1 md:pl-16 pb-1">
+            {props.children}
+          </div>
+          <Link href={props.href}>
+            <a className="text-left pl-6 pr-1 md:pl-1 text-base">Learn More</a>
+          </Link>
         </div>
       </div>
     </div>
