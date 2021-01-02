@@ -18,10 +18,10 @@ export const ExpandingCard: React.FC<any> = (props: Props) => {
   return (
     <div className="flex flex-col border border-black dark:border-white pt-2 pb-4">
       <button
-        className="flex justify-between focus:outline-none px-6 md:px-16"
+        className="flex justify-between focus:outline-none sm:pt-4 px-6 md:px-16"
         onClick={handleClick}
       >
-        <div className="z-10 font-bold text-center e">{props.title}</div>
+        <div className="z-10 font-bold text-cenclosedStyle ">{props.title}</div>
 
         {isOpen ? (
           <DownArrowIcon css="h-10 w-10 norotate" />
@@ -36,14 +36,20 @@ export const ExpandingCard: React.FC<any> = (props: Props) => {
       >
         <div
           className={`flex flex-col items-start ${
-            isOpen ? "block" : "hidden"
+            isOpen ? "openedStyle" : "closedStyle"
           } mt-1`}
         >
-          <div className="font-thin text-lg text-left pl-6 pr-1 md:pl-16 pb-1">
+          <div className="font-thin text-lg text-left pl-6 pr-1 sm:pr-6 md:pl-16 sm:pt-6 pb-1">
             {props.children}
           </div>
           <Link href={props.href}>
-            <a className="text-left pl-6 pr-1 md:pl-1 text-base">Learn More</a>
+            <a
+              className={`text-left pl-6 pr-1 md:pl-16 text-base ${
+                isOpen ? "block" : "hidden"
+              }`}
+            >
+              Learn More
+            </a>
           </Link>
         </div>
       </div>
