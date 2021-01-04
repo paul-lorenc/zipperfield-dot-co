@@ -1,4 +1,5 @@
 html {
+  @apply bg-white dark:bg-black;
 }
 
 .midnavdiv {
@@ -17,8 +18,8 @@ html {
 }
 
 .navmid {
-  max-height: 8em;
-  height: 8em;
+  max-height: 10em;
+  height: 10em;
 }
 
 .navbot {
