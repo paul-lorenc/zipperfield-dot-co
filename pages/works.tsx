@@ -3,6 +3,7 @@ import { getSortedWorks } from "@/lib/mdx";
 import { Work } from "@/lib/mdx";
 import { WorkCard } from "@/components/WorkCard";
 import { NextSeo } from "next-seo";
+import { FeaturedWork } from "@/components/FeaturedWork";
 
 const url: string = "https://zipperfield.co/works";
 const title: string = "Completed Works - Zipperfield";
@@ -34,10 +35,8 @@ export default function Code(props: Props) {
             // ],
           }}
         />
-        <div className="text-black dark:text-white max-w-3xl space-y-4 items-center pt-16 md:pt-20 px-4 h-screen">
-          <div className="flex flex-col justify-center items-center h-2/5 border border-black dark:border-white font-extrabold">
-            Featured Project goes here
-          </div>
+        <div className="text-black dark:text-white max-w-3xl space-y-4 items-center mt-20 md:mt-36 px-4 h-screen">
+          <FeaturedWork />
           {sortedPosts.map((w) => {
             return <WorkCard work={w} />;
           })}

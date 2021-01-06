@@ -8,17 +8,12 @@ export const WorkCard: React.FC<any> = (props: Props) => {
   let p: Work = props.work;
   return (
     <Link key={p.slug} href={`/works/${p.slug}`}>
-      <a className="flex items-center border border-gray-800 dark:border-gray-100 hover:border-gray-700 dark:hover:border-gray-300 px-6 py-2">
-        <div className="pr-4">
-          {/* <Image
-            src={p.src}
-            height={32}
-            width={32}
-            quality={40}
-            alt=""
-            priority
-            layout="fixed"
-          /> */}
+      <a className="flex flex-col items-center border border-gray-800 dark:border-gray-100 hover:border-gray-700 dark:hover:border-gray-300 pb-2">
+        <div className="md:hidden">
+          <Image src="/images/flower.png" width={1000} height={1500} />
+        </div>
+        <div className="hidden md:block">
+          <Image src="/images/home-banner.png" width={1500} height={1000} />
         </div>
         <div>
           <h4 className="text-2xl font-bold tracking-tight text-black dark:text-white pb-2">

@@ -38,7 +38,11 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <FeaturedWork />
+        <div className="space-y-6 pt-6">
+          <FeaturedWork />
+          <FeaturedWork />
+          <FeaturedWork />
+        </div>
       </div>
     </Container>
   );
