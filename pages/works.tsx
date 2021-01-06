@@ -35,7 +35,7 @@ export default function Code(props: Props) {
             // ],
           }}
         />
-        <div className="text-black dark:text-white max-w-3xl space-y-4 items-center mt-20 md:mt-36 px-4 h-screen">
+        <div className="text-black dark:text-white max-w-3xl space-y-4 items-center mt-20 md:mt-36 px-4">
           <FeaturedWork />
           {sortedPosts.map((w) => {
             return <WorkCard work={w} />;
