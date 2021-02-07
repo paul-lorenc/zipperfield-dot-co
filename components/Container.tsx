@@ -48,24 +48,6 @@ export const Container: React.FC = ({ children }) => {
                 <ZFIcon />
               </a>
             </Link>
-            <svg className="h-10 w-1/4 md:w-1/3">
-              <line
-                strokeWidth={1}
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-                stroke="currentColor"
-              />
-              <line
-                strokeWidth={1}
-                x1="0%"
-                y1="0%"
-                x2="0%"
-                y2="100%"
-                stroke="currentColor"
-              />
-            </svg>
             <button
               className="text-black dark:text-white font-bold focus:outline-none"
               onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
@@ -439,24 +421,6 @@ export const Container: React.FC = ({ children }) => {
                 </svg>
               )}
             </button>
-            <svg className="h-10 w-1/4 md:w-1/3">
-              <line
-                strokeWidth={1}
-                x1="0%"
-                y1="0%"
-                x2="100%"
-                y2="0%"
-                stroke="currentColor"
-              />
-              <line
-                strokeWidth={1}
-                x1="100%"
-                y1="0%"
-                x2="100%"
-                y2="100%"
-                stroke="currentColor"
-              />
-            </svg>
             <button
               onClick={isOpen ? handleClose : handleOpen}
               className="text-3xl focus:outline-none"
@@ -472,9 +436,9 @@ export const Container: React.FC = ({ children }) => {
             }}
             className={` ${
               theme === "dark" ? "bg-black" : "bg-white"
-            } opacity-0 z-10 fadein origin-top-right flex flex-col right-0 md:right-2 w-16 md:w-24 fixed overflow-hidden pl-2 text-black dark:text-white bg-opacity-60 bg-blur`}
+            } opacity-0 z-10 fadein origin-top-right flex flex-col right-0 md:right-2 w-20 md:w-28 fixed overflow-hidden pl-2 text-black dark:text-white bg-opacity-60 bg-blur`}
           >
-            <ul className="flex flex-col mt-12 md:mt-20 justify-center items-left text-sm md:text-xl space-y-2 md:space-y-3">
+            <ul className="flex flex-col mt-14 md:mt-16 lg:mt-20 justify-center items-left text-sm md:text-xl space-y-2 md:space-y-3">
               <Link href="/">
                 <a className="pt-3 pb-2">Home</a>
               </Link>
