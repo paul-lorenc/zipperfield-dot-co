@@ -1,47 +1,34 @@
 import { Container } from "@/components/Container";
-import { FeaturedWork } from "@/components/FeaturedWork";
+import { useEffect, useRef } from "react";
+import { TweenMax } from "gsap";
 import DownArrowIcon from "@/components/svgs/DownArrowIcon";
 import ZFIcon from "@/components/svgs/ZFIcon";
 import Image from "next/image";
 import Link from "next/link";
 export default function Home() {
+  let flowerRef: any = useRef(null);
+
+  useEffect(() => {
+    TweenMax.from(flowerRef, 1, { y: 200, opacity: 0 });
+  }, []);
   return (
     <Container>
-      <div className="flex flex-col font-serif w-screen px-4 md:px-10 text-black dark:text-white text-2xl font-extrabold space-y-4 max-w-5xl">
-        <div className="flex flex-col md:flex-row md:justify-around border md:border-none border-black dark:border-white pb-1 py-4 mt-16 md:mt-32">
-          <div className="flex md:flex-col w-full px-4 md:px-0 text-2xl md:text-5xl font-bold md:py-20 text-left text-md">
-            <p>{"Your Seed,"}</p>
-            <p> {"Our Garden"}</p>
+      <div className="z-1">
+        <div className="transition-colors duration-1000 flex flex-col h-screen bg-gray-200 dark:bg-gray-800">
+          <div
+            className="mt-12"
+            ref={(el: any) => {
+              flowerRef = el;
+            }}
+          >
+            <Image src="/images/flower.png" height={1400} width={1400} />
           </div>
-          <p className="flex w-full px-4 text-xl md:text-2xl font-thin py-4 md:py-20 text-black dark:text-gray-200">
-            We combine modern web technologies with creative design to deliver
-            high performance web applications that are crafted in your image.
-          </p>
         </div>
-        <div className="flex md:hidden flex-col font-thin items-stretch w-full justify-around mt-4">
-          <Link href="/about">
-            <button className="flex items-center justify-center md:justify-between border border-black dark:border-white px-4 py-2 md:w-2/5">
-              <div className="flex w-full justify-between px-4">
-                <a className="font-normal">About</a>
-
-                <DownArrowIcon css="h-10 w-10 transform -rotate-90" />
-              </div>
-            </button>
-          </Link>
-
-          <Link href="/contact">
-            <button className="flex items-center justify-center md:justify-between border border-black dark:border-white mt-4 px-4 py-2 md:w-2/5">
-              <div className="flex w-full justify-between px-4">
-                <a className="font-normal">{"Contact"}</a>
-                <DownArrowIcon css="h-10 w-10 transform -rotate-90" />
-              </div>
-            </button>
-          </Link>
+        <div className="flex flex-col h-screen bg-gray-500 dark:bg-gray-900">
+          hello 2
         </div>
-        <div className="space-y-4">
-          <FeaturedWork />
-          <FeaturedWork />
-          <FeaturedWork />
+        <div className="flex flex-col h-screen bg-gray-800 dark:bg-gray-200">
+          hello 3
         </div>
       </div>
     </Container>

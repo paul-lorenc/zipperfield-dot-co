@@ -1,6 +1,4 @@
 import Link from "next/link";
-import { Work } from "@/lib/mdx";
-import Image from "next/image";
 import { useState } from "react";
 import DownArrowIcon from "./svgs/DownArrowIcon";
 interface Props {

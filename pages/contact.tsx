@@ -1,6 +1,6 @@
 import { Container } from "@/components/Container";
-import { ExpandingCard } from "@/components/ExpandingCard";
 import { useState } from "react";
+
 export default function Contact() {
   const [status, setStatus] = useState({
     submitted: false,
@@ -58,11 +58,12 @@ export default function Contact() {
     const text = await res.text();
     handleResponse(res.status, text);
   };
+
   return (
     <Container>
-      <main className="mt-20 md:mt-36 text-black dark:text-gray-200 w-full h-screen md:w-3/5 px-6">
+      <main className="mt-16 md:mt-28 text-black dark:text-gray-200 w-1/2 h-screen px-6">
         <form
-          className="flex flex-col space-y-4 items-center"
+          className="flex flex-col space-y-4 items-center justify-center"
           onSubmit={handleOnSubmit}
         >
           <label htmlFor="email" className="text-xl">
@@ -72,7 +73,7 @@ export default function Contact() {
             id="email"
             type="email"
             onChange={handleOnChange}
-            className="text-black dark:text-white bg-white dark:bg-black border border-black dark:border-gray-400 p-1.5 dark:focus:border-white focus:shadow-lg"
+            className="zf-card p-1.5 dark:focus:border-white focus:shadow-lg"
             required
             value={inputs.email}
           />
@@ -82,14 +83,14 @@ export default function Contact() {
           <textarea
             id="message"
             onChange={handleOnChange}
-            className="text-black dark:text-white bg-white dark:bg-black border border-black dark:border-gray-400 p-4 w-full md:w-2/3 dark:focus:border-white dark:focus:shadow-blue"
+            className="zf-card p-4 w-full md:w-2/3 dark:focus:border-white dark:focus:shadow-blue"
             required
             rows={10}
             value={inputs.message}
           />
           <button
             type="submit"
-            className="border border-black dark:border-white px-2 py-1 text"
+            className="zf-card px-2 py-1 text"
             disabled={status.submitting}
           >
             {!status.submitting

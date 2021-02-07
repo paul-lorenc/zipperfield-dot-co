@@ -1,53 +1,24 @@
-#__next {
-  @apply bg-white dark:bg-black;
+html {
+  padding: 0;
+  margin: 0;
+  transition: background-color 0.5s;
 }
 
-.midnavdiv {
-  width: 72.5%;
+.zf-card {
+  @apply border border-gray-300 dark:border-gray-800 bg-gray-200 dark:bg-gray-900 text-black dark:text-white;
 }
 
 .sticky-nav {
   position: fixed;
   z-index: 10;
-  top: 0;
+}
+
+.bg-blur {
   backdrop-filter: saturate(180%) blur(20px);
-  transition: background-color 0.1 ease-in-out;
 }
 
-.navtop {
-  height: 1em;
-}
-
-.navmid {
-  max-height: 10em;
-  height: 10em;
-}
-
-.navbot {
-  max-height: 2em;
-  height: 1em;
-}
-
-.excardmid {
-  max-height: 6.5em;
-  height: 6.5em;
-}
-
-.excardmidlong {
-  max-height: 10em;
-  height: 10em;
-}
-
-.openedStyle {
-  max-height: "100%";
-  opacity: "100%";
-  transition: max-height 0.5s, opacity 0.3s 0.2s;
-}
-
-.closedStyle {
-  max-height: 0;
-  opacity: 0;
-  transition: max-height 0.7s, opacity 0.3s;
+.fadein {
+  transition: opacity 0.5s;
 }
 
 .norotate {
