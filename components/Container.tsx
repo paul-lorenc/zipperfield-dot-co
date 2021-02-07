@@ -5,6 +5,10 @@ import ZFIcon from "./svgs/ZFIcon";
 import { gsap, TweenMax, Power3 } from "gsap";
 import Hamburg from "./svgs/Hamburg";
 import Close from "./svgs/Close";
+import Gear from "./svgs/Gear";
+import HomeIcon from "./svgs/HomeIcon";
+import ImageIcon from "./svgs/ImageIcon";
+import ContactIcon from "./svgs/ContactIcon";
 
 export const Container: React.FC = ({ children }) => {
   const [mounted, setMounted] = useState(false);
@@ -32,7 +36,7 @@ export const Container: React.FC = ({ children }) => {
   };
 
   return (
-    <div className=" bg-white dark:bg-black tracking-tight">
+    <div className=" bg-white dark:bg-black tracking-tight font-sans">
       <div
         className="
         zf-switch flex flex-col font-sans items-center bg-white dark:bg-black"
@@ -438,27 +442,31 @@ export const Container: React.FC = ({ children }) => {
             }}
             className={` ${
               theme === "dark" ? "bg-gray-900" : "bg-gray-100"
-            } opacity-0 z-10 border border-gray-200 dark:border-gray-600 text-black dark:text-white fadein origin-top-right flex flex-col right-3 md:right-12 w-28 md:w-48 p-2 md:p-4 fixed overflow-hidden bg-opacity-60 bg-blur`}
+            } opacity-0 z-10 border border-gray-200 dark:border-gray-600 text-black dark:text-white fadein origin-top-right flex flex-col right-2 md:right-12 w-28 md:w-48 p-2 md:p-5 fixed overflow-hidden bg-opacity-60 bg-blur`}
           >
-            <ul className="flex flex-col mt-14 justify-center items-left text-sm md:text-2xl space-y-2 md:space-y-3">
+            <ul className="flex flex-col mt-14 justify-center items-left text-sm md:text-2xl font-bold space-y-2 md:space-y-3">
               <Link href="/">
-                <a className="p-2 hover:text-gray-600 dark:hover:text-gray-200">
-                  Home
+                <a className="flex justify-between items-center p-2 hover:text-gray-600 dark:hover:text-gray-200">
+                  <a>Home</a>
+                  <HomeIcon />
                 </a>
               </Link>
               <Link href="/about">
-                <a className="p-2 hover:text-gray-600 dark:hover:text-gray-200">
-                  About
+                <a className="flex justify-between items-center p-2 hover:text-gray-600 dark:hover:text-gray-200">
+                  <a>Process</a>
+                  <Gear />
                 </a>
               </Link>
-              <Link href="/works">
-                <a className="p-2 hover:text-gray-600 dark:hover:text-gray-200">
-                  Works
+              <Link href="/about">
+                <a className="flex justify-between items-center p-2 hover:text-gray-600 dark:hover:text-gray-200">
+                  <a>Works</a>
+                  <ImageIcon />
                 </a>
               </Link>
               <Link href="/contact">
-                <a className="p-2 hover:text-gray-600 dark:hover:text-gray-200">
-                  Contact
+                <a className="flex justify-between items-center p-2 hover:text-gray-600 dark:hover:text-gray-200">
+                  <a>Works</a>
+                  <ContactIcon />
                 </a>
               </Link>
             </ul>

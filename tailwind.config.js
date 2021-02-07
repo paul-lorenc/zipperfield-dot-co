@@ -10,14 +10,14 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     extend: {
+      fontFamily: {
+        sans: ["Inter", ...fontFamily.sans],
+      },
       colors: {
         // Build your palette here
         transparent: "transparent",
         current: "currentColor",
         gray: colors.trueGray,
-      },
-      fontFamily: {
-        sans: ["Inter", ...fontFamily.sans],
       },
     },
   },
