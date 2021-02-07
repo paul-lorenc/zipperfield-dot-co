@@ -4,8 +4,20 @@ html {
   transition: background-color 0.5s;
 }
 
+@font-face {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 100 900;
+  font-display: optional;
+  src: url(/fonts/inter-var-latin.woff2) format("woff2");
+}
+
 .zf-card {
-  @apply border border-gray-300 dark:border-gray-800 bg-gray-200 dark:bg-gray-900 text-black dark:text-white;
+  @apply border border-gray-300 dark:border-gray-600 bg-gray-200 dark:bg-gray-900 text-black dark:text-white;
+}
+
+.zf-switch {
+  @apply transition-colors duration-1000;
 }
 
 .sticky-nav {

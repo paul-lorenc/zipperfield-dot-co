@@ -19,29 +19,29 @@ export const Container: React.FC = ({ children }) => {
   const handleOpen = () => {
     TweenMax.fromTo(
       menuRef,
-      0.6,
-      { scaleY: 0, opacity: 0 },
-      { scaleY: 1, opacity: 1 }
+      0.2,
+      { scale: 0, opacity: 0 },
+      { scale: 1, opacity: 1 }
     );
     setisOpen(true);
   };
 
   const handleClose = () => {
-    TweenMax.to(menuRef, 0.6, { scaleY: 0, opacity: 0 });
+    TweenMax.to(menuRef, 0.3, { scale: 0, opacity: 0 });
     setisOpen(false);
   };
 
   return (
-    <div className=" bg-white dark:bg-black">
+    <div className=" bg-white dark:bg-black tracking-tight">
       <div
         className="
-        flex flex-col font-sans items-center transition-colors duration-1000 bg-white dark:bg-black"
+        zf-switch flex flex-col font-sans items-center bg-white dark:bg-black"
       >
         {mounted && (
           <nav
             className={`${
               theme === "dark" ? "bg-black" : "bg-white"
-            } flex bg-opacity-60 z-20 sticky-nav bg-blur w-full text-black dark:text-white justify-between px-4 md:px-12 py-2 md:py-4 items-center`}
+            } flex bg-opacity-60 z-20 sticky-nav bg-blur w-full text-black dark:text-white justify-between px-4 md:px-16 py-2 items-center`}
           >
             <Link href="/">
               <a className="focus:outline-none">
@@ -423,7 +423,9 @@ export const Container: React.FC = ({ children }) => {
             </button>
             <button
               onClick={isOpen ? handleClose : handleOpen}
-              className="text-3xl focus:outline-none"
+              className={` ${
+                theme === "dark" ? "bg-gray-900" : "bg-gray-100"
+              } border border-gray-200 dark:border-gray-600 zf-switch focus:outline-none bg-opacity-20`}
             >
               <a>{isOpen ? <Close /> : <Hamburg />}</a>
             </button>
@@ -435,21 +437,29 @@ export const Container: React.FC = ({ children }) => {
               menuRef = el;
             }}
             className={` ${
-              theme === "dark" ? "bg-black" : "bg-white"
-            } opacity-0 z-10 fadein origin-top-right flex flex-col right-0 md:right-2 w-20 md:w-28 fixed overflow-hidden pl-2 text-black dark:text-white bg-opacity-60 bg-blur`}
+              theme === "dark" ? "bg-gray-900" : "bg-gray-100"
+            } opacity-0 z-10 border border-gray-200 dark:border-gray-600 text-black dark:text-white fadein origin-top-right flex flex-col right-3 md:right-12 w-28 md:w-48 p-2 md:p-4 fixed overflow-hidden bg-opacity-60 bg-blur`}
           >
-            <ul className="flex flex-col mt-14 md:mt-16 lg:mt-20 justify-center items-left text-sm md:text-xl space-y-2 md:space-y-3">
+            <ul className="flex flex-col mt-14 justify-center items-left text-sm md:text-2xl space-y-2 md:space-y-3">
               <Link href="/">
-                <a className="pt-3 pb-2">Home</a>
+                <a className="p-2 hover:text-gray-600 dark:hover:text-gray-200">
+                  Home
+                </a>
               </Link>
               <Link href="/about">
-                <a className="pb-2">About</a>
+                <a className="p-2 hover:text-gray-600 dark:hover:text-gray-200">
+                  About
+                </a>
               </Link>
               <Link href="/works">
-                <a className="pb-2">Works</a>
+                <a className="p-2 hover:text-gray-600 dark:hover:text-gray-200">
+                  Works
+                </a>
               </Link>
               <Link href="/contact">
-                <a className="pb-2">Contact</a>
+                <a className="p-2 hover:text-gray-600 dark:hover:text-gray-200">
+                  Contact
+                </a>
               </Link>
             </ul>
           </div>

@@ -1,6 +1,6 @@
 const Close = () => (
   <svg
-    viewBox="-20 -20 160 160"
+    viewBox="-40 -40 200 200"
     className="h-10 w-10 md:h-14 md:w-14 fill-current"
   >
     <polygon

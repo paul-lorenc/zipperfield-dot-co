@@ -1,6 +1,6 @@
 const Hamburg = () => (
   <svg
-    viewBox="0 0 159.5 105.25"
+    viewBox="-15 -10 190 120"
     className="h-10 w-10 md:h-14 md:w-14 fill-current"
   >
     <polygon points="159.5 91.75 159.5 105.25 79.75 105.25 159.5 91.75" />
