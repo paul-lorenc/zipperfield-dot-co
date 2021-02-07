@@ -27,7 +27,7 @@ export default function Home() {
             <div className="font-bold text-3xl md:text-5xl max-w-lg mb-6 md:mb-8 inline-block">
               Unified Branding for your Business
             </div>
-            <div className="font-normal text-lg md:text-xl max-w-lg mb-6 md:mb-8 inline-block">
+            <div className="hidden font-normal text-lg md:text-xl max-w-lg mb-6 md:mb-8 sm:inline-block">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
