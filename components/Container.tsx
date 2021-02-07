@@ -465,7 +465,7 @@ export const Container: React.FC = ({ children }) => {
               </Link>
               <Link href="/contact">
                 <a className="flex justify-between items-center p-2 hover:text-gray-600 dark:hover:text-gray-200">
-                  <a>Works</a>
+                  <a>Contact</a>
                   <ContactIcon />
                 </a>
               </Link>
