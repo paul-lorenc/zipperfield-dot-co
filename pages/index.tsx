@@ -15,28 +15,28 @@ export default function Home() {
     <Container>
       <div className="z-1 text-black dark:text-white font-sans">
         <div
-          className="zf-switch flex flex-col md:flex-row-reverse min-h-screen md:min-h-full bg-white dark:bg-black md:justify-between items-start"
+          className="zf-switch flex flex-col md:flex-row-reverse min-h-full bg-white dark:bg-black md:justify-between items-start md:px-10 md:mb-16"
           ref={(el: any) => {
             flowerRef = el;
           }}
         >
-          <div className="mt-20 md:mt-28">
-            <Image src="/images/flower.png" height={800} width={800} />
+          <div className="mt-16 md:mt-28">
+            <Image src="/images/flower.png" height={500} width={500} />
           </div>
-          <div className="flex flex-col px-4 mt-4 md:mt-56 md:pr-12">
-            <div className="font-bold text-4xl md:text-7xl max-w-lg mb-6 md:mb-8 inline-block">
+          <div className="flex flex-col px-4 mt-4 md:mt-36 lg:mt-56 md:pr-12">
+            <div className="font-bold text-3xl md:text-5xl max-w-lg mb-6 md:mb-8 inline-block">
               Unified Branding for your Business
             </div>
-            <div className=" font-normal text-lg md:text-xl max-w-lg mb-6 md:mb-8 inline-block">
+            <div className="font-normal text-lg md:text-xl max-w-lg mb-6 md:mb-8 inline-block">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
             </div>
 
-            <div className=" justify-left space-x-2 md:space-x-4 mb-4 md:mb-10">
-              <button className="bg-blue-200 dark:bg-blue-800 bg-opacity-60 px-1 sm:px-3 py-1 text-xl border border-blue-50 dark:border-blue-600">
+            <div className="justify-left space-x-2 md:space-x-4 mb-4 md:mb-10">
+              <button className="bg-blue-200 dark:bg-blue-800 bg-opacity-60 px-3 py-1 text-lg lg:text-xl border border-blue-50 dark:border-blue-600 focus:outline-none">
                 Contact Sales
               </button>
-              <button className="zf-card px-3 py-1 text-xl border">
+              <button className="zf-card px-3 py-1 text-lg lg:text-xl border focus:outline-none">
                 View Works
               </button>
             </div>
