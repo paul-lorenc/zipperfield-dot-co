@@ -1,7 +1,7 @@
 const ImageIcon = () => (
   <svg
     viewBox="0 0 112.25 112.24"
-    className="h-6 w-6 md:h-9 md:w-9 fill-current text-pink-200 dark:text-pink-800"
+    className="h-6 w-6 md:h-9 md:w-9 fill-current text-pink-300 dark:text-pink-800"
   >
     <path
       d="M156.21,41.13V153.37H44V41.13ZM152,149.19V45.31H48.15V149.19Z"

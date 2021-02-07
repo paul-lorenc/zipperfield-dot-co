@@ -442,9 +442,9 @@ export const Container: React.FC = ({ children }) => {
             }}
             className={` ${
               theme === "dark" ? "bg-gray-900" : "bg-gray-100"
-            } opacity-0 z-10 border border-gray-200 dark:border-gray-600 text-black dark:text-white fadein origin-top-right flex flex-col right-2 md:right-12 w-32 md:w-48 p-2 md:p-5 fixed overflow-hidden bg-opacity-60 bg-blur`}
+            } opacity-0 z-10 border border-gray-200 dark:border-gray-600 text-black dark:text-white fadein origin-top-right flex flex-col right-2 md:right-12 w-32 md:w-56 p-2 md:p-5 fixed overflow-hidden bg-opacity-60 bg-blur`}
           >
-            <ul className="flex flex-col mt-14 justify-center items-left text-sm md:text-2xl font-bold space-y-2 md:space-y-3">
+            <ul className="flex flex-col mt-14 justify-center items-left text-sm md:text-2xl font-semibold space-y-2 md:space-y-3">
               <Link href="/">
                 <a className="flex justify-between items-center p-2 hover:text-gray-600 dark:hover:text-gray-200">
                   <a>Home</a>
