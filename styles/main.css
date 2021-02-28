@@ -353,7 +353,7 @@ main {
   column-gap: 16px;
   width: var(--layoutWidth);
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: max-content max-content max-content;
+  grid-template-rows: min-content min-content max-content;
 }
 
 .Work--Logos {
