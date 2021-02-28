@@ -1,54 +1,165 @@
-import { Container } from "@/components/Container";
-import { useEffect, useRef } from "react";
-import { TweenMax } from "gsap";
-import DownArrowIcon from "@/components/svgs/DownArrowIcon";
-import ZFIcon from "@/components/svgs/ZFIcon";
-import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
+import { TweenMax, Power3 } from "gsap";
 import Link from "next/link";
+import ScrollbarSize from "react-scrollbar-size";
 export default function Home() {
-  let flowerRef: any = useRef(null);
+  const [scrollWidth, setScrollWidth] = useState("0");
+  const [mobileMenu, setMobileMenu] = useState(false);
 
-  useEffect(() => {
-    TweenMax.from(flowerRef, 1.5, { y: 100, opacity: 0, ease: "power2.out" });
-  }, []);
+  let mobileMenuRef = useRef(null);
+
+  const onScrollBarChange = ({ width }: any) => {
+    setScrollWidth(width.toString() + "px");
+  };
+  var scrollStyle = { "--scrollbarWidth": scrollWidth } as React.CSSProperties;
+
+  const onHamburg = () => {
+    setMobileMenu(!mobileMenu);
+  };
+
+  const openMobileM = () => {
+    TweenMax.to(mobileMenuRef, 0.3, {
+      opacity: 1,
+      zIndex: 100,
+      ease: Power3.easeOut,
+    });
+    onHamburg();
+  };
+
+  const closeMobileM = () => {
+    TweenMax.to(mobileMenuRef, 0.3, {
+      opacity: 0,
+      zIndex: 0,
+      ease: Power3.easeOut,
+    });
+    onHamburg();
+  };
+
   return (
-    <Container>
-      <div className="z-1 text-black dark:text-white font-sans">
-        <div
-          className="zf-switch flex flex-col md:flex-row-reverse min-h-full bg-white dark:bg-black md:justify-between items-start md:px-10 md:mb-16"
-          ref={(el: any) => {
-            flowerRef = el;
-          }}
-        >
-          <div className="mt-16 md:mt-28">
-            <Image src="/images/flower.png" height={500} width={500} />
-          </div>
-          <div className="flex flex-col px-4 mt-4 md:mt-36 lg:mt-56 md:pr-12">
-            <div className="font-bold text-3xl md:text-5xl max-w-lg mb-6 md:mb-8 inline-block">
-              Unified Branding for your Business
-            </div>
-            <div className="hidden font-normal text-lg md:text-xl max-w-lg mb-6 md:mb-8 sm:inline-block">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </div>
+    <>
+      <ScrollbarSize onChange={onScrollBarChange} />
 
-            <div className="justify-left space-x-2 md:space-x-4 mb-4 md:mb-10">
-              <button className="bg-blue-200 dark:bg-blue-800 bg-opacity-60 px-3 py-1 text-lg lg:text-xl border border-blue-50 dark:border-blue-600 focus:outline-none">
-                Contact Sales
-              </button>
-              <button className="zf-card px-3 py-1 text-lg lg:text-xl border focus:outline-none">
-                View Works
-              </button>
-            </div>
+      <main className="ZRoot" style={scrollStyle}>
+        <div className="ZMobileMenu" ref={(el: any) => (mobileMenuRef = el)}>
+          <div className="ZMM--Header">
+            <button
+              className="ZMM--Close"
+              onClick={mobileMenu ? closeMobileM : openMobileM}
+            >
+              X
+            </button>
+            <a className="ZMM--Services">Services</a>
+            <a className="ZMM--Process">Process</a>
+            <a className="ZMM--Works">Works</a>
           </div>
         </div>
-        <div className="flex flex-col h-screen bg-gray-500 dark:bg-gray-900">
-          hello 2
+        <div className="ZHeader--Container">
+          <header className="ZHeader">
+            <div>zipperfield</div>
+            <div className="ZHeader--DesktopNav">
+              <button className="DesktopNav--Item">Services</button>
+              <button className="DesktopNav--Item">Process</button>
+              <button className="DesktopNav--Item">Works</button>
+            </div>
+            <button className="ZHeader--Contact">Contact</button>
+            <button
+              className="ZHeader--Hamburg"
+              onClick={mobileMenu ? closeMobileM : openMobileM}
+            >
+              H
+            </button>
+          </header>
         </div>
-        <div className="flex flex-col h-screen bg-gray-800 dark:bg-gray-200">
-          hello 3
-        </div>
-      </div>
-    </Container>
+        <section className="ZHero--Container">
+          <div className="ZHero--Grid">
+            <div className="ZHero"></div>
+            <div className="ZHero--Text--Container">
+              <h1 className="ZHero--Supertext">
+                We build hand crafted experiences.
+              </h1>
+              <p className="ZHero--Subtext">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+              <div className="ZHero--ButtonBox">
+                <button className="ZH--BB--Works">Works</button>
+                <button className="ZH--BB--Contact">Contact</button>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="ZWhat--Container">
+          <div className="ZWhat--Grid">
+            <div className="ZWhat"></div>
+            <div className="ZWhat--Text--Container">
+              <h2 className="ZWhat--Heading">Smart design meets smart tech.</h2>
+              <p className="ZWhat--Body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+            </div>
+          </div>
+        </section>
+        <section className="ZHow--Container">
+          <div className="ZHow--Grid">
+            <div className="ZHow--Text--Container">
+              <h2 className="ZHow--Heading">Smart design meets smart tech.</h2>
+              <p className="ZHow--Subheading">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt.
+              </p>
+            </div>
+            <div className="ZHow--Subgrid">
+              <div className="ZHow--SG--Research">
+                <h2>Research</h2>
+                <p className="ZHow--SG--p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod ad minim veniam, quis nostrud exercitation
+                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat labore et dolore magna aliqua. nisi ut aliquip ex ea
+                  commodo consequat Ut enim ad minim veniam, quis nostrud
+                  exercitation.
+                </p>
+              </div>
+              <div className="ZHow-SG--Build">
+                <h2>Build</h2>
+                <p className="ZHow--SG--p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod labore et dolore magna aliqua. nisi ut aliquip ex
+                  ea commodo consequat Ut enim ad minim veniam, quis nostrud
+                  exercitation quis nostrud exercitation ullamco laboris nisi ut
+                  aliquip ex ea commodo consequat
+                </p>
+              </div>
+              <div className="ZHow--SG--Test">
+                <h2>Test</h2>
+                <p className="ZHow--SG--p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod labore et dolore magna aliqua. nisi ut aliquip ex
+                  ea commodo consequat Ut enim ad minim veniam, quis nostrud
+                  exercitation ullamco laboris quis nostrud exercitation ullamco
+                  laboris nisi ut aliquip ex ea commodo consequat
+                </p>
+              </div>
+              <div className="ZHow--SG--Iterate">
+                <h2>Iterate</h2>
+                <p className="ZHow--SG--p">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor labore et dolore magna aliqua. nisi ut
+                  aliquip ex ea commodo consequat Ut enim ad minim veniam, quis
+                  nostrud exercitation
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section></section>
+        <section></section>
+      </main>
+    </>
   );
 }
