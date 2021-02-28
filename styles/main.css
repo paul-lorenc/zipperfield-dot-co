@@ -219,9 +219,12 @@ main {
 
 .ZHero--Grid {
   margin: 0 auto;
+  margin-top: 20px;
+  padding-bottom: 20px;
   width: var(--layoutWidth);
   display: grid;
   grid-template-columns: repeat(var(--heroColumnCount), 1fr);
+  column-gap: 32px;
 }
 
 .ZHero {
@@ -235,12 +238,12 @@ main {
   height: 100%;
   display: grid;
   row-gap: 32px;
+  align-self: start;
   grid-template-rows: repeat(3, max-content);
 }
 
 .ZHero--Supertext {
   margin: 0;
-  margin-top: 100px;
   font-weight: 100;
   font-size: var(--h1FontSize);
 }
@@ -263,6 +266,9 @@ main {
 }
 
 @media (min-width: 900px) {
+  .ZHero--Grid {
+    margin-top: 50px;
+  }
   .ZHero--Text--Container {
     order: -1;
   }
@@ -277,9 +283,12 @@ main {
 
 .ZWhat--Grid {
   margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
   width: var(--layoutWidth);
   display: grid;
   grid-template-columns: repeat(var(--heroColumnCount), 1fr);
+  column-gap: 32px;
 }
 
 .ZWhat {
@@ -302,6 +311,12 @@ main {
 }
 
 .ZWhat--Body {
+}
+
+@media (min-width: 900px) {
+  .ZWhat--Grid {
+    padding-top: 50px;
+  }
 }
 
 /* How Section */

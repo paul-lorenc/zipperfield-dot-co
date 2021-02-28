@@ -7,6 +7,8 @@ import WorkBrowser from "@/components/svgs/WorkBrowser";
 import LogoDemo from "@/components/svgs/LogoDemo";
 import ZfFont from "@/components/svgs/ZfFont";
 import Hamburg from "@/components/svgs/Hamburg";
+import BrainDance from "@/components/svgs/BrainDance";
+import ZfWhat from "@/components/svgs/ZfWhat";
 export default function Home() {
   const [scrollWidth, setScrollWidth] = useState("0");
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -77,7 +79,9 @@ export default function Home() {
         </div>
         <section className="ZHero--Container">
           <div className="ZHero--Grid">
-            <div className="ZHero"></div>
+            <div className="ZHero">
+              <BrainDance />
+            </div>
             <div className="ZHero--Text--Container">
               <h1 className="ZHero--Supertext">
                 We build hand crafted experiences.
@@ -97,7 +101,9 @@ export default function Home() {
         </section>
         <section className="ZWhat--Container">
           <div className="ZWhat--Grid">
-            <div className="ZWhat"></div>
+            <div className="ZWhat">
+              <ZfWhat />
+            </div>
             <div className="ZWhat--Text--Container">
               <h2 className="ZWhat--Heading">Smart design meets smart tech.</h2>
               <p className="ZWhat--Body">
