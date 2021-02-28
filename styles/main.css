@@ -208,7 +208,6 @@ main {
   margin: 0 auto;
   width: var(--layoutWidth);
   display: grid;
-  height: calc(75vh - 56px);
   grid-template-columns: repeat(var(--heroColumnCount), 1fr);
 }
 
@@ -267,7 +266,6 @@ main {
   margin: 0 auto;
   width: var(--layoutWidth);
   display: grid;
-  height: 75vh;
   grid-template-columns: repeat(var(--heroColumnCount), 1fr);
 }
 
@@ -303,7 +301,6 @@ main {
   margin: 0 auto;
   width: var(--layoutWidth);
   display: grid;
-  height: 60vh;
   grid-template-rows: repeat(2, max-content);
 }
 
@@ -338,4 +335,68 @@ main {
 
 .ZHow--SG--p {
   margin-top: 16px;
+}
+
+/* Works Section */
+
+.ZWorks--Container {
+  width: var(--windowWidth);
+  overflow: hidden;
+}
+
+.ZWorks--Grid {
+  display: grid;
+  overflow: hidden;
+  margin: 0 auto;
+  margin-top: 100px;
+  row-gap: 16px;
+  column-gap: 16px;
+  width: var(--layoutWidth);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr max-content max-content;
+}
+
+.Work--Logos {
+  height: 100%;
+  width: 100%;
+  background-color: #b3b3b3;
+}
+
+.Work--Phone {
+  height: 100%;
+  width: 100%;
+  max-height: 600px;
+}
+
+.Work--Browser {
+  grid-column-start: span 2;
+}
+
+.Work--Icons {
+  grid-column-start: span 2;
+  background-color: lightgray;
+  height: 170px;
+}
+
+@media (min-width: 600px) {
+  .Work--Logos {
+    order: -1;
+  }
+  .ZWorks--Grid {
+    margin: 0;
+    margin-left: var(--gutterWidth);
+    margin-top: 100px;
+    width: var(--layoutWidthMax);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: min-content 0.5fr 0.5fr;
+  }
+  .Work--Browser {
+    grid-area: 1 / 2 / span 3 / span 4;
+  }
+  .Work--Phone {
+    grid-area: 2 / 1 / span 2 / span 1;
+    z-index: 2;
+  }
+  .Work--Icons {
+  }
 }

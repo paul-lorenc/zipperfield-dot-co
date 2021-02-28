@@ -2,6 +2,9 @@ import { useEffect, useRef, useState } from "react";
 import { TweenMax, Power3 } from "gsap";
 import Link from "next/link";
 import ScrollbarSize from "react-scrollbar-size";
+import WorkPhone from "@/components/svgs/WorkPhone";
+import WorkBrowser from "@/components/svgs/WorkBrowser";
+import LogoDemo from "@/components/svgs/LogoDemo";
 export default function Home() {
   const [scrollWidth, setScrollWidth] = useState("0");
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -159,7 +162,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section></section>
+        <section className="ZWorks--Container">
+          <div className="ZWorks--Grid">
+            <WorkPhone />
+            <LogoDemo />
+            <WorkBrowser />
+            <div className="Work--Icons">more icons</div>
+          </div>
+        </section>
         <section></section>
       </main>
     </>
