@@ -107,7 +107,9 @@ export default function Home() {
         <section className="ZHow--Container">
           <div className="ZHow--Grid">
             <div className="ZHow--Text--Container">
-              <h2 className="ZHow--Heading">Smart design meets smart tech.</h2>
+              <h2 className="ZHow--Heading">
+                A collaborative, metric-driven approach to UX.
+              </h2>
               <p className="ZHow--Subheading">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
