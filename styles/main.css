@@ -375,7 +375,6 @@ main {
 .Work--Icons {
   grid-column-start: span 2;
   background-color: lightgray;
-  height: 170px;
 }
 
 @media (min-width: 600px) {
