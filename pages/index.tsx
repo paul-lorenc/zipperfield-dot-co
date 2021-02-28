@@ -5,6 +5,8 @@ import ScrollbarSize from "react-scrollbar-size";
 import WorkPhone from "@/components/svgs/WorkPhone";
 import WorkBrowser from "@/components/svgs/WorkBrowser";
 import LogoDemo from "@/components/svgs/LogoDemo";
+import ZfFont from "@/components/svgs/ZfFont";
+import Hamburg from "@/components/svgs/Hamburg";
 export default function Home() {
   const [scrollWidth, setScrollWidth] = useState("0");
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -58,7 +60,7 @@ export default function Home() {
         </div>
         <div className="ZHeader--Container">
           <header className="ZHeader">
-            <div>zipperfield</div>
+            <ZfFont />
             <div className="ZHeader--DesktopNav">
               <button className="DesktopNav--Item">Services</button>
               <button className="DesktopNav--Item">Process</button>
@@ -69,7 +71,7 @@ export default function Home() {
               className="ZHeader--Hamburg"
               onClick={mobileMenu ? closeMobileM : openMobileM}
             >
-              H
+              <Hamburg />
             </button>
           </header>
         </div>
