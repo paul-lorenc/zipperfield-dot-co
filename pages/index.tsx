@@ -64,9 +64,9 @@ export default function Home() {
           <header className="ZHeader">
             <ZfFont />
             <div className="ZHeader--DesktopNav">
-              <button className="DesktopNav--Item">Services</button>
-              <button className="DesktopNav--Item">Process</button>
-              <button className="DesktopNav--Item">Works</button>
+              <a className="DesktopNav--Item">Services</a>
+              <a className="DesktopNav--Item">Process</a>
+              <a className="DesktopNav--Item">Works</a>
             </div>
             <button className="ZHeader--Contact">Contact</button>
             <button
@@ -96,22 +96,6 @@ export default function Home() {
                 <button className="ZH--BB--Works">Works</button>
                 <button className="ZH--BB--Contact">Contact</button>
               </div>
-            </div>
-          </div>
-        </section>
-        <section className="ZWhat--Container">
-          <div className="ZWhat--Grid">
-            <div className="ZWhat">
-              <ZfWhat />
-            </div>
-            <div className="ZWhat--Text--Container">
-              <h2 className="ZWhat--Heading">Smart design meets smart tech.</h2>
-              <p className="ZWhat--Body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat
-              </p>
             </div>
           </div>
         </section>
@@ -170,6 +154,42 @@ export default function Home() {
             </div>
           </div>
         </section>
+        <section className="ZWhat--Container">
+          <div className="ZWhat--Grid">
+            <div className="ZWhat--Text--Container">
+              <h2 className="ZWhat--Heading">Smart design meets smart tech.</h2>
+              <p className="ZWhat--Body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+            </div>
+            <div className="ZWhat">
+              <ZfWhat />
+            </div>
+            <div className="ZWhat--Text--Container">
+              <div className="flex">
+                <h2 className="ZWhat--Heading">Process Title</h2>
+                <div className="fred">
+                  <button>{"<"}</button>
+                  <button>{"o"}</button>
+                  <button>{"o"}</button>
+                  <button>{"o"}</button>
+                  <button>{"o"}</button>
+                  <button>{">"}</button>
+                </div>
+              </div>
+              <p className="ZWhat--Body">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat
+              </p>
+            </div>
+          </div>
+        </section>
+
         <section className="ZWorks--Container">
           <div className="ZWorks--Grid">
             <WorkPhone />
