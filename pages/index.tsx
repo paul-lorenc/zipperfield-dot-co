@@ -8,7 +8,8 @@ import LogoDemo from "@/components/svgs/LogoDemo";
 import ZfFont from "@/components/svgs/ZfFont";
 import Hamburg from "@/components/svgs/Hamburg";
 import BrainDance from "@/components/svgs/BrainDance";
-import ZfWhat from "@/components/svgs/ZfWhat";
+import ProcessCard from "@/components/ProcessCard";
+
 export default function Home() {
   const [scrollWidth, setScrollWidth] = useState("0");
   const [mobileMenu, setMobileMenu] = useState(false);
@@ -157,36 +158,14 @@ export default function Home() {
         <section className="ZWhat--Container">
           <div className="ZWhat--Grid">
             <div className="ZWhat--Text--Container">
-              <h2 className="ZWhat--Heading">Smart design meets smart tech.</h2>
+              <h2 className="ZWhat--Heading">Our Process</h2>
               <p className="ZWhat--Body">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat
+                enim ad minim veniam.
               </p>
             </div>
-            <div className="ZWhat">
-              <ZfWhat />
-            </div>
-            <div className="ZWhat--Text--Container">
-              <div className="flex">
-                <h2 className="ZWhat--Heading">Process Title</h2>
-                <div className="fred">
-                  <button>{"<"}</button>
-                  <button>{"o"}</button>
-                  <button>{"o"}</button>
-                  <button>{"o"}</button>
-                  <button>{"o"}</button>
-                  <button>{">"}</button>
-                </div>
-              </div>
-              <p className="ZWhat--Body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat
-              </p>
-            </div>
+            <ProcessCard />
           </div>
         </section>
 

@@ -313,12 +313,13 @@ main {
 }
 
 .flex {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .fred {
-  margin: 0 auto;
+  margin-left: 20px;
+  margin-right: auto;
 }
 
 .ZHow--Subgrid {
