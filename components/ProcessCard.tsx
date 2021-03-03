@@ -27,38 +27,71 @@ const processText = [
 
 function ProcessCard() {
   const [step, setStep] = useState(0);
+  let titlebox = useRef(null);
+  let textbox = useRef(null);
 
   const decreaseStep = () => {
     if (step > 0) {
       setStep(step - 1);
+      TweenMax.fromTo(
+        textbox,
+        0.4,
+        { opacity: 0 },
+        { opacity: 1, ease: Power3.easeOut }
+      );
+      TweenMax.fromTo(
+        titlebox,
+        0.4,
+        { opacity: 0 },
+        { opacity: 1, ease: Power3.easeOut }
+      );
     }
   };
   const increaseStep = () => {
-    if (step == 3) {
-      setStep(0);
-      return;
-    }
     if (step < 3) {
       setStep(step + 1);
+      TweenMax.fromTo(
+        textbox,
+        0.4,
+        { opacity: 0 },
+        { opacity: 1, ease: Power3.easeOut }
+      );
+      TweenMax.fromTo(
+        titlebox,
+        0.4,
+        { opacity: 0 },
+        { opacity: 1, ease: Power3.easeOut }
+      );
     }
   };
 
   return (
-    <>
-      <div className="ZWhat">
+    <section className="ZWhat--Container">
+      <div className="ZWhat--Grid">
+        <div className="ZWhat--Text--Container">
+          <h2 className="ZWhat--Heading">Our Process</h2>
+          <p className="ZWhat--Body">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
+            ad minim veniam.
+          </p>
+        </div>
+        <div></div>
         <ZfWhat />
-      </div>
-      <div className="ZWhat--Text--Container">
-        <div className="flex">
-          <h2 className="ZWhat--Heading">{processText[step].title}</h2>
-          <div className="fred">
+        <div className="ZWhat--Text--Container">
+          <div className="flex">
             <button onClick={decreaseStep}>{"<"}</button>
+            <h2 className="ZWhat--Heading" ref={(el: any) => (titlebox = el)}>
+              {processText[step].title}
+            </h2>
             <button onClick={increaseStep}>{">"}</button>
           </div>
+          <p className="ZWhat--Body" ref={(el: any) => (textbox = el)}>
+            {processText[step].text}
+          </p>
         </div>
-        <p className="ZWhat--Body">{processText[step].text}</p>
       </div>
-    </>
+    </section>
   );
 }
 

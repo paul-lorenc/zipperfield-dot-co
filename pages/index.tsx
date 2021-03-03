@@ -13,6 +13,9 @@ import ProcessCard from "@/components/ProcessCard";
 export default function Home() {
   const [scrollWidth, setScrollWidth] = useState("0");
   const [mobileMenu, setMobileMenu] = useState(false);
+  let serviceRef: any = useRef(null);
+  let processRef: any = useRef(null);
+  let worksRef: any = useRef(null);
 
   let mobileMenuRef = useRef(null);
 
@@ -43,6 +46,27 @@ export default function Home() {
     onHamburg();
   };
 
+  //AutoScroll Functions
+  const serviceScroll = () => {
+    if (mobileMenu) {
+      closeMobileM();
+    }
+
+    serviceRef.scrollIntoView();
+  };
+  const processScroll = () => {
+    if (mobileMenu) {
+      closeMobileM();
+    }
+    processRef.scrollIntoView();
+  };
+  const worksScroll = () => {
+    if (mobileMenu) {
+      closeMobileM();
+    }
+    worksRef.scrollIntoView();
+  };
+
   return (
     <>
       <ScrollbarSize onChange={onScrollBarChange} />
@@ -56,18 +80,32 @@ export default function Home() {
             >
               X
             </button>
-            <a className="ZMM--Services">Services</a>
-            <a className="ZMM--Process">Process</a>
-            <a className="ZMM--Works">Works</a>
+            <button onClick={serviceScroll} className="ZMM--Services">
+              Services
+            </button>
+            <button onClick={processScroll} className="ZMM--Process">
+              Process
+            </button>
+            <button onClick={worksScroll} className="ZMM--Works">
+              Works
+            </button>
+            <div className="ZMM--Contact--Container"></div>
+            <button className="ZMM--Contact">Contact</button>
           </div>
         </div>
         <div className="ZHeader--Container">
           <header className="ZHeader">
             <ZfFont />
             <div className="ZHeader--DesktopNav">
-              <a className="DesktopNav--Item">Services</a>
-              <a className="DesktopNav--Item">Process</a>
-              <a className="DesktopNav--Item">Works</a>
+              <button onClick={serviceScroll} className="DesktopNav--Item">
+                Services
+              </button>
+              <button onClick={processScroll} className="DesktopNav--Item">
+                Process
+              </button>
+              <button onClick={worksScroll} className="DesktopNav--Item">
+                Works
+              </button>
             </div>
             <button className="ZHeader--Contact">Contact</button>
             <button
@@ -100,7 +138,10 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="ZHow--Container">
+        <section
+          className="ZHow--Container"
+          ref={(el: any) => (serviceRef = el)}
+        >
           <div className="ZHow--Grid">
             <div className="ZHow--Text--Container">
               <h2 className="ZHow--Heading">
@@ -155,21 +196,14 @@ export default function Home() {
             </div>
           </div>
         </section>
-        <section className="ZWhat--Container">
-          <div className="ZWhat--Grid">
-            <div className="ZWhat--Text--Container">
-              <h2 className="ZWhat--Heading">Our Process</h2>
-              <p className="ZWhat--Body">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam.
-              </p>
-            </div>
-            <ProcessCard />
-          </div>
-        </section>
+        <div ref={(el: any) => (processRef = el)}>
+          <ProcessCard />
+        </div>
 
-        <section className="ZWorks--Container">
+        <section
+          className="ZWorks--Container"
+          ref={(el: any) => (worksRef = el)}
+        >
           <div className="ZWorks--Grid">
             <WorkPhone />
             <LogoDemo />
