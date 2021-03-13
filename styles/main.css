@@ -413,6 +413,7 @@ main {
 }
 
 .ZProcess--Body {
+  margin-top: 8px;
 }
 
 @media (min-width: 900px) {
