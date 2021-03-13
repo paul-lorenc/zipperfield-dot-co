@@ -27,8 +27,44 @@ const processText = [
 
 function ProcessCard() {
   const [step, setStep] = useState(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  let target = useRef(null);
   let p1 = useRef(null);
   let p2 = useRef(null);
+
+  const scrollListener = () => {
+    if (!target.current) {
+      return;
+    }
+
+    const element: any = target.current;
+    const windowScroll = element.scrollLeft; // Distance of the scrollbar from the leftmost point
+    const totalWidth = element.scrollWidth - element.clientWidth; // Total width the scrollbar can traverse
+    if (windowScroll === 0) {
+      return setStep(0);
+    }
+
+    if (windowScroll > totalWidth) {
+      return setStep(3);
+    }
+
+    let scrollPer: number = (windowScroll / totalWidth) * 100;
+
+    let step = 0;
+
+    if (scrollPer > 16) {
+      step = 1;
+    }
+
+    if (scrollPer > 45) {
+      step = 2;
+    }
+
+    if (scrollPer > 78) {
+      step = 3;
+    }
+    setStep(step);
+  };
 
   const decreaseStep = () => {
     if (step > 0) {
@@ -40,6 +76,15 @@ function ProcessCard() {
       setStep(step + 1);
     }
   };
+
+  useEffect((): any => {
+    //@ts-ignore
+    target.current.addEventListener("touchmove", scrollListener);
+    return () =>
+      target &&
+      //@ts-ignore
+      target.current.removeEventListener("touchmove", scrollListener);
+  });
 
   return (
     <section className="ZProcess--Container">
@@ -77,7 +122,7 @@ function ProcessCard() {
             </button>
           </div>
           <div className="ZProcess--Carousel--Container">
-            <div className="ZProcess--Carousel">
+            <div className="ZProcess--Carousel" ref={target}>
               <div className="ZP--Carousel--Card">
                 <div className="ZP--CardWrap">
                   <h2 className="ZProcess--Heading">{processText[0].title}</h2>
