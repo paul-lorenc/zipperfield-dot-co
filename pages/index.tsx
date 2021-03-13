@@ -74,10 +74,7 @@ export default function Home() {
       <main className="ZRoot" style={scrollStyle}>
         <div className="ZMobileMenu" ref={(el: any) => (mobileMenuRef = el)}>
           <div className="ZMM--Header">
-            <button
-              className="ZMM--Close"
-              onClick={mobileMenu ? closeMobileM : openMobileM}
-            >
+            <button className="ZMM--Close" onClick={closeMobileM}>
               X
             </button>
             <button onClick={serviceScroll} className="ZMM--Services">
@@ -139,23 +136,23 @@ export default function Home() {
           </div>
         </section>
         <section
-          className="ZHow--Container"
+          className="ZServices--Container"
           ref={(el: any) => (serviceRef = el)}
         >
-          <div className="ZHow--Grid">
-            <div className="ZHow--Text--Container">
-              <h2 className="ZHow--Heading">
+          <div className="ZServices--Grid">
+            <div className="ZServices--Text--Container">
+              <h2 className="ZServices--Heading">
                 A collaborative, metric-driven approach to UX.
               </h2>
-              <p className="ZHow--Subheading">
+              <p className="ZServices--Subheading">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                 eiusmod tempor incididunt.
               </p>
             </div>
-            <div className="ZHow--Subgrid">
-              <div className="ZHow--SG--Research">
+            <div className="ZServices--Subgrid">
+              <div className="ZServices--SG--Research">
                 <h2>Research</h2>
-                <p className="ZHow--SG--p">
+                <p className="ZServices--SG--p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod ad minim veniam, quis nostrud exercitation
                   exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -164,9 +161,9 @@ export default function Home() {
                   exercitation.
                 </p>
               </div>
-              <div className="ZHow-SG--Build">
+              <div className="ZServices-SG--Build">
                 <h2>Build</h2>
-                <p className="ZHow--SG--p">
+                <p className="ZServices--SG--p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod labore et dolore magna aliqua. nisi ut aliquip ex
                   ea commodo consequat Ut enim ad minim veniam, quis nostrud
@@ -174,9 +171,9 @@ export default function Home() {
                   aliquip ex ea commodo consequat
                 </p>
               </div>
-              <div className="ZHow--SG--Test">
+              <div className="ZServices--SG--Test">
                 <h2>Test</h2>
-                <p className="ZHow--SG--p">
+                <p className="ZServices--SG--p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod labore et dolore magna aliqua. nisi ut aliquip ex
                   ea commodo consequat Ut enim ad minim veniam, quis nostrud
@@ -184,9 +181,9 @@ export default function Home() {
                   laboris nisi ut aliquip ex ea commodo consequat
                 </p>
               </div>
-              <div className="ZHow--SG--Iterate">
+              <div className="ZServices--SG--Iterate">
                 <h2>Iterate</h2>
-                <p className="ZHow--SG--p">
+                <p className="ZServices--SG--p">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
                   do eiusmod tempor labore et dolore magna aliqua. nisi ut
                   aliquip ex ea commodo consequat Ut enim ad minim veniam, quis

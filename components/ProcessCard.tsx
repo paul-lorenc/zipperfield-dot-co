@@ -14,7 +14,7 @@ const processText = [
       "Dui nunc mattis enim ut tellus elementum sagittis vitae et. Malesuada fames ac turpis egestas. Odio pellentesque diam volutpat commodo sed egestas egestas fringilla phasellus. Quisque egestas diam in arcu cursus. In nibh mauris cursus mattis molestie a.",
   },
   {
-    title: "Iterating",
+    title: "Iteration",
     text:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mi sit amet mauris commodo. Lacus vestibulum sed arcu non odio euismod. Purus faucibus ornare suspendisse sed.",
   },
@@ -27,68 +27,75 @@ const processText = [
 
 function ProcessCard() {
   const [step, setStep] = useState(0);
-  let titlebox = useRef(null);
-  let textbox = useRef(null);
+  let p1 = useRef(null);
+  let p2 = useRef(null);
 
   const decreaseStep = () => {
     if (step > 0) {
       setStep(step - 1);
-      TweenMax.fromTo(
-        textbox,
-        0.4,
-        { opacity: 0 },
-        { opacity: 1, ease: Power3.easeOut }
-      );
-      TweenMax.fromTo(
-        titlebox,
-        0.4,
-        { opacity: 0 },
-        { opacity: 1, ease: Power3.easeOut }
-      );
     }
   };
   const increaseStep = () => {
     if (step < 3) {
       setStep(step + 1);
-      TweenMax.fromTo(
-        textbox,
-        0.4,
-        { opacity: 0 },
-        { opacity: 1, ease: Power3.easeOut }
-      );
-      TweenMax.fromTo(
-        titlebox,
-        0.4,
-        { opacity: 0 },
-        { opacity: 1, ease: Power3.easeOut }
-      );
     }
   };
 
   return (
-    <section className="ZWhat--Container">
-      <div className="ZWhat--Grid">
-        <div className="ZWhat--Text--Container">
-          <h2 className="ZWhat--Heading">Our Process</h2>
-          <p className="ZWhat--Body">
+    <section className="ZProcess--Container">
+      <div className="ZProcess--Grid">
+        <div className="ZProcess--Mobile--Header">
+          <h2 className="ZProcess--Heading">Our Process</h2>
+          <p className="ZProcess--Body">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam.
           </p>
         </div>
-        <div></div>
         <ZfWhat />
-        <div className="ZWhat--Text--Container">
-          <div className="flex">
-            <button onClick={decreaseStep}>{"<"}</button>
-            <h2 className="ZWhat--Heading" ref={(el: any) => (titlebox = el)}>
-              {processText[step].title}
-            </h2>
-            <button onClick={increaseStep}>{">"}</button>
+        <div>
+          <div className="ZProcess--Header">
+            <h2 className="ZProcess--Heading">Our Process</h2>
+            <p className="ZProcess--Body">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam.
+            </p>
           </div>
-          <p className="ZWhat--Body" ref={(el: any) => (textbox = el)}>
-            {processText[step].text}
-          </p>
+          <div className="ZProcess--Desktop--Buttons">
+            <button onClick={() => setStep(0)} className="ZProcess--Dt-Button">
+              Onboarding
+            </button>
+            <button onClick={() => setStep(1)} className="ZProcess--Dt-Button">
+              Concept Art
+            </button>
+            <button onClick={() => setStep(2)} className="ZProcess--Dt-Button">
+              Iteration
+            </button>
+            <button onClick={() => setStep(3)} className="ZProcess--Dt-Button">
+              Handoff
+            </button>
+          </div>
+          <div className="ZProcess--Carousel--Container">
+            <div className="ZProcess--Carousel">
+              <div className="ZP--Carousel--Card">
+                <h2 className="ZProcess--Heading">{processText[0].title}</h2>
+                <p className="ZProcess--Body">{processText[0].text}</p>
+              </div>
+              <div className="ZP--Carousel--Card">
+                <h2 className="ZProcess--Heading">{processText[1].title}</h2>
+                <p className="ZProcess--Body">{processText[1].text}</p>
+              </div>
+              <div className="ZP--Carousel--Card">
+                <h2 className="ZProcess--Heading">{processText[2].title}</h2>
+                <p className="ZProcess--Body">{processText[2].text}</p>
+              </div>
+              <div className="ZP--Carousel--Card">
+                <h2 className="ZProcess--Heading">{processText[3].title}</h2>
+                <p className="ZProcess--Body">{processText[3].text}</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
