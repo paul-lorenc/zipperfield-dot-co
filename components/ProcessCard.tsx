@@ -79,20 +79,28 @@ function ProcessCard() {
           <div className="ZProcess--Carousel--Container">
             <div className="ZProcess--Carousel">
               <div className="ZP--Carousel--Card">
-                <h2 className="ZProcess--Heading">{processText[0].title}</h2>
-                <p className="ZProcess--Body">{processText[0].text}</p>
+                <div className="ZP--CardWrap">
+                  <h2 className="ZProcess--Heading">{processText[0].title}</h2>
+                  <p className="ZProcess--Body">{processText[0].text}</p>
+                </div>
               </div>
               <div className="ZP--Carousel--Card">
-                <h2 className="ZProcess--Heading">{processText[1].title}</h2>
-                <p className="ZProcess--Body">{processText[1].text}</p>
+                <div className="ZP--CardWrap">
+                  <h2 className="ZProcess--Heading">{processText[1].title}</h2>
+                  <p className="ZProcess--Body">{processText[1].text}</p>
+                </div>
               </div>
               <div className="ZP--Carousel--Card">
-                <h2 className="ZProcess--Heading">{processText[2].title}</h2>
-                <p className="ZProcess--Body">{processText[2].text}</p>
+                <div className="ZP--CardWrap">
+                  <h2 className="ZProcess--Heading">{processText[2].title}</h2>
+                  <p className="ZProcess--Body">{processText[2].text}</p>
+                </div>
               </div>
               <div className="ZP--Carousel--Card">
-                <h2 className="ZProcess--Heading">{processText[3].title}</h2>
-                <p className="ZProcess--Body">{processText[3].text}</p>
+                <div className="ZP--CardWrap">
+                  <h2 className="ZProcess--Heading">{processText[3].title}</h2>
+                  <p className="ZProcess--Body">{processText[3].text}</p>
+                </div>
               </div>
             </div>
           </div>

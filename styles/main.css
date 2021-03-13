@@ -402,7 +402,10 @@ main {
 .ZP--Carousel--Card {
   scroll-snap-align: center;
   min-width: 100%;
-  height: 275px;
+}
+
+.ZP--CardWrap {
+  margin: 20px;
 }
 
 .ZProcess--Heading {
