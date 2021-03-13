@@ -28,9 +28,11 @@ const processText = [
 function ProcessCard() {
   const [step, setStep] = useState(0);
   const [scrollProgress, setScrollProgress] = useState(0);
-  let target = useRef(null);
-  let p1 = useRef(null);
-  let p2 = useRef(null);
+  let target: any = useRef(null);
+  let p0: any = useRef(null);
+  let p1: any = useRef(null);
+  let p2: any = useRef(null);
+  let p3: any = useRef(null);
 
   const scrollListener = () => {
     if (!target.current) {
@@ -56,35 +58,41 @@ function ProcessCard() {
       step = 1;
     }
 
-    if (scrollPer > 45) {
+    if (scrollPer > 50) {
       step = 2;
     }
 
     if (scrollPer > 78) {
       step = 3;
     }
+    console.log(step);
     setStep(step);
-  };
-
-  const decreaseStep = () => {
-    if (step > 0) {
-      setStep(step - 1);
-    }
-  };
-  const increaseStep = () => {
-    if (step < 3) {
-      setStep(step + 1);
-    }
   };
 
   useEffect((): any => {
     //@ts-ignore
-    target.current.addEventListener("touchmove", scrollListener);
+    target.current.addEventListener("scroll", scrollListener);
     return () =>
       target &&
       //@ts-ignore
-      target.current.removeEventListener("touchmove", scrollListener);
+      target.current.removeEventListener("scroll", scrollListener);
   });
+
+  const p0Scroll = () => {
+    setStep(0);
+  };
+
+  const p1Scroll = () => {
+    setStep(1);
+  };
+
+  const p2Scroll = () => {
+    setStep(2);
+  };
+
+  const p3Scroll = () => {
+    setStep(3);
+  };
 
   return (
     <section className="ZProcess--Container">
@@ -94,54 +102,60 @@ function ProcessCard() {
           <p className="ZProcess--Body">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam.
+            ad minim veniam. Lorem ipsum dolor sit amet, consectetur adipiscing
+            elit, sed do eiusmod tempor incididunt.
           </p>
         </div>
         <ZfWhat />
-        <div>
+        <div className="ZProcess--Desktop--Body">
           <div className="ZProcess--Header">
             <h2 className="ZProcess--Heading">Our Process</h2>
             <p className="ZProcess--Body">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam.
+              enim ad minim veniam. Lorem ipsum dolor sit amet, consectetur
+              adipiscing elit, sed do eiusmod tempor incididunt
             </p>
           </div>
           <div className="ZProcess--Desktop--Buttons">
-            <button onClick={() => setStep(0)} className="ZProcess--Dt-Button">
+            <button onClick={p0Scroll} className="ZProcess--Dt-Button">
               Onboarding
             </button>
-            <button onClick={() => setStep(1)} className="ZProcess--Dt-Button">
+            <button onClick={p1Scroll} className="ZProcess--Dt-Button">
               Concept Art
             </button>
-            <button onClick={() => setStep(2)} className="ZProcess--Dt-Button">
+            <button onClick={p2Scroll} className="ZProcess--Dt-Button">
               Iteration
             </button>
-            <button onClick={() => setStep(3)} className="ZProcess--Dt-Button">
+            <button onClick={p3Scroll} className="ZProcess--Dt-Button">
               Handoff
             </button>
           </div>
+          <h2 className="ZProcess--Heading">{processText[step].title}</h2>
+          <p className="ZProcess--Body">{processText[step].text}</p>
+        </div>
+        <div className="ZProcess--Mobile--Wrapper">
           <div className="ZProcess--Carousel--Container">
             <div className="ZProcess--Carousel" ref={target}>
-              <div className="ZP--Carousel--Card">
+              <div className="ZP--Carousel--Card" ref={p0}>
                 <div className="ZP--CardWrap">
                   <h2 className="ZProcess--Heading">{processText[0].title}</h2>
                   <p className="ZProcess--Body">{processText[0].text}</p>
                 </div>
               </div>
-              <div className="ZP--Carousel--Card">
+              <div className="ZP--Carousel--Card" ref={p1}>
                 <div className="ZP--CardWrap">
                   <h2 className="ZProcess--Heading">{processText[1].title}</h2>
                   <p className="ZProcess--Body">{processText[1].text}</p>
                 </div>
               </div>
-              <div className="ZP--Carousel--Card">
+              <div className="ZP--Carousel--Card" ref={p2}>
                 <div className="ZP--CardWrap">
                   <h2 className="ZProcess--Heading">{processText[2].title}</h2>
                   <p className="ZProcess--Body">{processText[2].text}</p>
                 </div>
               </div>
-              <div className="ZP--Carousel--Card">
+              <div className="ZP--Carousel--Card" ref={p3}>
                 <div className="ZP--CardWrap">
                   <h2 className="ZProcess--Heading">{processText[3].title}</h2>
                   <p className="ZProcess--Body">{processText[3].text}</p>

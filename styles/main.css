@@ -365,11 +365,18 @@ main {
   width: var(--layoutWidth);
   display: grid;
   grid-template-columns: 1fr;
-  row-gap: 32px;
   column-gap: 64px;
 }
 
+.ZProcess--Mobile--Wrapper {
+  width: 100%;
+}
+
 .ZProcess--Header {
+  display: none;
+}
+
+.ZProcess--Desktop--Body {
   display: none;
 }
 
@@ -389,7 +396,7 @@ main {
 
 .ZProcess--Carousel {
   border: 1px solid black;
-  margin-top: 48px;
+  margin-top: 16px;
   display: flex;
   flex-direction: row;
   width: 100%;
@@ -405,7 +412,7 @@ main {
 }
 
 .ZP--CardWrap {
-  margin: 20px;
+  margin: 24px;
 }
 
 .ZProcess--Heading {
@@ -419,9 +426,16 @@ main {
 @media (min-width: 900px) {
   .ZProcess--Grid {
     padding-top: 50px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 2fr 2fr;
+  }
+  .ZProcess--Desktop--Body {
+    display: block;
+    width: calc((var(--layoutWidth) / 2) - 16px);
   }
   .ZProcess--Mobile--Header {
+    display: none;
+  }
+  .ZProcess--Mobile--Wrapper {
     display: none;
   }
   .ZProcess--Header {
@@ -436,8 +450,8 @@ main {
   .ZProcess--Desktop--Buttons {
     display: flex;
     flex-direction: column;
-    margin-top: 48px;
-    margin-bottom: 48px;
+    margin-top: 36px;
+    margin-bottom: 16px;
   }
 }
 
